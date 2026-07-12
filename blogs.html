@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  
+  <!-- SEO Meta Tags -->
+  <title>Alpha Dental International International | Delhi's Premier Dental Clinic</title>
+  <meta name="description" content="Experience world-class dental care led by Dr. Alpha Dental and our team of expert specialists in South Delhi. Specialized orthodontic braces, implants, micro-endodontics, and pediatric care." />
+  <meta name="keywords" content="Delhi Dental, Orthodontics, Invisalign, Implants, Root Canal, Dr. Alpha Dental, GK-1 Dental Clinic" />
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  
+  <!-- FontAwesome Icons -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
+  
+  <!-- Core Design System Custom Styles -->
+  <link href="index.css" rel="stylesheet"/>
+
+  <!-- Tailwind Theme Customizations -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'navy-blue': '#1B365D',
+            'navy-dark': '#0B1A30',
+            'gold-accent': '#C5A059',
+            'gold-hover': '#B48F48',
+            'light-blue': '#F0F4F8',
+            'white': '#FFFFFF',
+            'light-gray': '#F8FAFC',
+            'dark-text': '#1F2937',
+            'border-color': '#E2E8F0'
+          },
+          fontFamily: {
+            serif: ['"Source Serif 4"', 'serif'],
+            sans: ['"Hanken Grotesk"', 'sans-serif']
+          },
+          boxShadow: {
+            'level-1': '0px 4px 20px rgba(15, 23, 42, 0.05)',
+            'level-2': '0px 10px 30px rgba(15, 23, 42, 0.08)'
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="font-sans antialiased text-[#191c1e] bg-white">
+
+  <!-- ==================== TOP BAR ==================== -->
+  <div class="bg-navy-dark text-white text-[11px] py-2 px-4 md:px-8 flex justify-between items-center border-b border-border-color z-50 relative">
+    <div class="flex items-center gap-6">
+      <div class="flex items-center gap-2">
+        <i class="fa-solid fa-location-dot text-gold-accent"></i>
+        <span>First Floor, E 18, GK-1, Block R, Greater Kailash I, New Delhi - 110048 (Above NM-PET Scan)</span>
+      </div>
+      <div class="hidden sm:flex items-center gap-2">
+        <i class="fa-solid fa-phone text-gold-accent"></i>
+        <span>085999 70005</span>
+      </div>
+    </div>
+    <div class="flex items-center gap-2">
+      <span class="w-1.5 h-1.5 bg-gold-accent rounded-full animate-ping"></span>
+      <span class="text-gray-500 font-semibold tracking-wider uppercase">Open Today till 7:00 PM</span>
+    </div>
+  </div>
+
+  <!-- ==================== NAVIGATION HEADER ==================== -->
+  <header class="sticky top-0 z-40 bg-white/75 backdrop-blur-lg px-4 md:px-8 py-3.5 flex items-center justify-between border-b border-border-color/60 shadow-[0_2px_15px_rgba(0,0,0,0.015)]">
+    <!-- Logo Section -->
+    <a href="#" class="flex items-center gap-3 group">
+      <div class="w-10 h-10 flex items-center justify-center bg-navy-dark text-gold-accent rounded-md shadow-md shrink-0">
+        <i class="fa-solid fa-tooth text-2xl transition-transform group-hover:scale-110"></i>
+      </div>
+      <div class="flex flex-col">
+        <span class="text-lg md:text-xl font-bold tracking-wider text-navy-dark font-serif leading-none">ALPHA DENTAL INTERNATIONAL</span>
+        <span class="text-[9px] tracking-[0.18em] text-gray-500 font-semibold">INTERNATIONAL</span>
+      </div>
+    </a>
+
+    <!-- Desktop Navigation -->
+    <nav class="hidden lg:flex items-center gap-8 text-sm font-medium text-dark-text">
+      <a class="nav-link-underline" href="index.html" id="nav-home">Home</a>
+      <a class="nav-link-underline" href="index.html#about" id="nav-about">About</a>
+      <a class="nav-link-underline" href="index.html#services" id="nav-services">Services</a>
+      <a class="nav-link-underline" href="index.html#team" id="nav-team">Our Team</a>
+      <a class="nav-link-underline" href="index.html#testimonials" id="nav-testimonials">Testimonials</a>
+      <a class="nav-link-underline active-nav-link" href="blogs.html" id="nav-blogs">Blogs</a>
+      <a class="nav-link-underline" href="index.html#booking" id="nav-booking">Contacts</a>
+    </nav>
+
+    <!-- Header Actions -->
+    <div class="flex items-center gap-3">
+      <a href="tel:08599970005" class="hidden sm:inline-flex items-center justify-center p-2 rounded-md border border-[#c6c6cd] text-dark-text hover:bg-gray-light transition-colors">
+        <i class="fa-solid fa-phone"></i>
+      </a>
+      <a href="index.html#booking" class="bg-gold-accent hover:bg-gold-hover text-white px-5 py-2.5 rounded-md text-xs font-bold flex items-center gap-2 transition-all shadow-md hover:shadow-lg">
+        <i class="fa-solid fa-calendar-days text-sm"></i>
+        <span>Book Now</span>
+      </a>
+      <!-- Mobile hamburger menu button -->
+      <button id="mobile-menu-btn" class="lg:hidden p-2 rounded-md border border-border-color text-navy-dark hover:bg-gray-light" aria-label="Toggle Navigation Menu">
+        <i class="fa-solid fa-bars text-lg"></i>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Menu Overlay -->
+  <div id="mobile-menu-overlay" class="fixed inset-0 bg-black/50 z-50 hidden transition-opacity duration-300"></div>
+  <!-- Mobile Drawer Panel -->
+  <div id="mobile-menu-drawer" class="fixed top-0 bottom-0 right-0 w-80 bg-white z-50 translate-x-full transition-transform duration-300 ease-in-out p-6 shadow-2xl flex flex-col justify-between">
+    <div>
+      <div class="flex items-center justify-between pb-6 border-b border-border-color">
+        <div class="flex items-center gap-2">
+          <i class="fa-solid fa-tooth text-gold-accent text-2xl"></i>
+          <span class="text-lg font-bold font-serif text-navy-dark">Alpha Dental International</span>
+        </div>
+        <button id="mobile-menu-close" class="p-2 text-gray-500 hover:text-navy-dark" aria-label="Close menu">
+          <i class="fa-solid fa-xmark text-xl"></i>
+        </button>
+      </div>
+      <nav class="flex flex-col gap-5 py-8 text-base font-semibold text-dark-text">
+        <a class="hover:text-gold-accent transition-colors py-2 border-b border-gray-50" href="index.html">Home</a>
+        <a class="hover:text-gold-accent transition-colors py-2 border-b border-gray-50" href="index.html#about">About</a>
+        <a class="hover:text-gold-accent transition-colors py-2 border-b border-gray-50" href="index.html#services">Services</a>
+        <a class="hover:text-gold-accent transition-colors py-2 border-b border-gray-50" href="index.html#team">Our Team</a>
+        <a class="hover:text-gold-accent transition-colors py-2 border-b border-gray-50" href="index.html#testimonials">Testimonials</a>
+        <a class="hover:text-gold-accent transition-colors py-2 border-b border-gray-50" href="blogs.html">Blogs</a>
+        <a class="hover:text-gold-accent transition-colors py-2 border-b border-gray-50" href="index.html#booking">Contacts</a>
+      </nav>
+    </div>
+    <div class="border-t border-border-color pt-6 space-y-4">
+      <div class="text-xs text-gray-500">
+        <p class="font-bold text-navy-dark">Quick Contact</p>
+        <p class="mt-1">085999 70005</p>
+        <p>delhidentalclinicindia@gmail.com</p>
+      </div>
+      <a href="index.html#booking" id="mobile-drawer-booking-btn" class="w-full bg-gold-accent text-white py-3 rounded-md text-sm font-bold flex items-center justify-center gap-2 shadow-md">
+        <i class="fa-solid fa-calendar-check"></i>
+        <span>Book Appointment</span>
+      </a>
+    </div>
+  </div>
+
+  
+  <!-- ==================== BLOGS CATALOG MAIN CONTENT ==================== -->
+  <main class="py-24 bg-gray-light min-h-[calc(100vh-250px)] relative overflow-hidden grid-pattern">
+    <div class="max-w-7xl mx-auto px-4 md:px-8">
+      
+      <!-- Page Header -->
+      <div class="text-center mb-12 space-y-4">
+        <div class="inline-block px-3 py-1 bg-gold-accent/10 text-gold-accent text-[10px] font-bold uppercase tracking-widest rounded">
+          CLINICAL LIBRARY
+        </div>
+        <h1 class="text-4xl md:text-5xl font-semibold font-serif text-navy-dark leading-tight">Educational Dental Insights</h1>
+        <p class="text-gray-600 tracking-wide max-w-2xl mx-auto text-sm md:text-base leading-relaxed tracking-wide">
+          Stay informed with dental guides, preventive care recommendations, and research summaries written by our expert specialists.
+        </p>
+      </div>
+
+      <!-- Categories Filter bar -->
+      <div class="flex flex-wrap items-center justify-center gap-3 mb-12">
+        <button class="px-5 py-2.5 text-xs font-bold text-white bg-gold-accent rounded-full uppercase tracking-widest shadow-md transition-all hover:-translate-y-0.5">All Articles</button>
+        <button class="px-4 py-2 text-xs font-bold text-gold-accent bg-white border border-border-color hover:border-gold-accent rounded-full uppercase tracking-wider transition-colors">Orthodontics</button>
+        <button class="px-4 py-2 text-xs font-bold text-gold-accent bg-white border border-border-color hover:border-gold-accent rounded-full uppercase tracking-wider transition-colors">Root Canal</button>
+        <button class="px-4 py-2 text-xs font-bold text-gold-accent bg-white border border-border-color hover:border-gold-accent rounded-full uppercase tracking-wider transition-colors">Pediatrics</button>
+        <button class="px-4 py-2 text-xs font-bold text-gold-accent bg-white border border-border-color hover:border-gold-accent rounded-full uppercase tracking-wider transition-colors">General Health</button>
+      </div>
+
+      <!-- Blogs Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        
+        <!-- Blog Card 1 -->
+        <article class="ds-card overflow-hidden flex flex-col justify-between h-full border border-border-color">
+          <div>
+            <div class="relative h-56 overflow-hidden">
+              <img alt="Invisalign clear aligners compared to braces" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB88PhRcxEk7TChkvOX5dxoFT8m0MO_zdnSN-9j4ZruY-hPbuTJwIrqroy8o3kHlZlNayufMWfDKxeC4LXQjCCtoqzvb1f6sLOdYJ-rgLqZNHfmfVg7Oq--SxEZFqcSU1QicumfY-jfIFTtoxH0IBchJaCycQ4iAkqXuGoY789-7HJsnnl1JCIdWmmoDU6pqbPGXuLS2b9U0jABzSQR8VqngRkK8y6HQK1t83E1tOGvw1OXWUag-rKZ"/>
+              <div class="absolute top-4 left-4 bg-gold-accent text-white text-[9px] font-bold px-2 py-1 rounded shadow tracking-wider uppercase">ORTHODONTICS</div>
+            </div>
+            <div class="p-6 space-y-3">
+              <div class="flex items-center gap-2 text-xs text-gray-500 font-semibold">
+                <span>July 10, 2026</span>
+                <span>•</span>
+                <span>5 min read</span>
+              </div>
+              <h3 class="text-lg font-bold font-serif text-navy-dark hover:text-gold-accent transition-colors leading-snug">
+                <a href="#">The Future of Orthodontics: Invisalign vs Traditional Braces</a>
+              </h3>
+              <p class="text-gray-600 tracking-wide text-xs leading-relaxed tracking-wide">
+                Discover how modern aligners shape facial symmetry and the differences in comfort, timing, and clinical results.
+              </p>
+            </div>
+          </div>
+          <div class="p-6 pt-0 flex items-center justify-between border-t border-gray-50 mt-4">
+            <div class="flex items-center gap-2">
+              <div class="w-8 h-8 rounded-full bg-teal-light flex items-center justify-center text-gold-accent font-bold text-xs shrink-0">NG</div>
+              <span class="text-[10px] font-bold text-gray-600 tracking-wide">Dr. Alpha Dental</span>
+            </div>
+            <a href="#" class="text-xs font-bold text-gold-accent hover:text-gold-hover flex items-center gap-1">
+              <span>Read article</span>
+              <i class="fa-solid fa-chevron-right text-[9px]"></i>
+            </a>
+          </div>
+        </article>
+
+        <!-- Blog Card 2 -->
+        <article class="ds-card overflow-hidden flex flex-col justify-between h-full border border-border-color">
+          <div>
+            <div class="relative h-56 overflow-hidden">
+              <img alt="Advanced endodontic microscope RCT" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuACbSbQ8B5dLg3M1Jyai3_WyRxczJXV4VPhrY7qQAmH4LgVSqcBJ--XwhCcg_mpCUwU970YFQuMh1l4Au2D0HDQU7NeiinysJAN7XbmNGrouxD8gFWNNIBJKt5EybF7pHHw_ui9lYLHEynBBDSm1k6u-RIr_p4zbVpF6NIgXBBEy8kwd9rRYebGJZH_tuSRWhj9_gEhi43k3HE0mLjo2D11wRzORaegglN-spl5125E-N_49Hs4LoGH"/>
+              <div class="absolute top-4 left-4 bg-gold-accent text-white text-[9px] font-bold px-2 py-1 rounded shadow tracking-wider uppercase">ROOT CANAL</div>
+            </div>
+            <div class="p-6 space-y-3">
+              <div class="flex items-center gap-2 text-xs text-gray-500 font-semibold">
+                <span>June 28, 2026</span>
+                <span>•</span>
+                <span>6 min read</span>
+              </div>
+              <h3 class="text-lg font-bold font-serif text-navy-dark hover:text-gold-accent transition-colors leading-snug">
+                <a href="#">Understanding Microscopic Root Canals: Painless &amp; Precise</a>
+              </h3>
+              <p class="text-gray-600 tracking-wide text-xs leading-relaxed tracking-wide">
+                How magnification systems help endodontists save natural teeth with higher clinical precision and less discomfort.
+              </p>
+            </div>
+          </div>
+          <div class="p-6 pt-0 flex items-center justify-between border-t border-gray-50 mt-4">
+            <div class="flex items-center gap-2">
+              <div class="w-8 h-8 rounded-full bg-teal-light flex items-center justify-center text-gold-accent font-bold text-xs shrink-0">SB</div>
+              <span class="text-[10px] font-bold text-gray-600 tracking-wide">Dr. Sonali Bansal</span>
+            </div>
+            <a href="#" class="text-xs font-bold text-gold-accent hover:text-gold-hover flex items-center gap-1">
+              <span>Read article</span>
+              <i class="fa-solid fa-chevron-right text-[9px]"></i>
+            </a>
+          </div>
+        </article>
+
+        <!-- Blog Card 3 -->
+        <article class="ds-card overflow-hidden flex flex-col justify-between h-full border border-border-color">
+          <div>
+            <div class="relative h-56 overflow-hidden">
+              <img alt="Pediatric child dental care" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB6FnX7A3PRdENsf8APQ4i7f0FQUFZ0IPDjxS1cO2d-a4QYUFTtmCS0puyxwf0byT5MfTkHS4o8mhW1d5pdYRZKZlZsAlgwpEGeNOgC9HQ06jtvOEbJ0McE6OKsaUNSJqRa6tINZOSqHbuyb9joMrJt3KbekBDultJhllEy4eY9UNMWmmwm7t8ou_McybSfXPDG9RNQaj8YI7qYNsb1L_8sp7O0qqaDf8nlwA9KwJJ7HRM-NzXPvvfe"/>
+              <div class="absolute top-4 left-4 bg-gold-accent text-white text-[9px] font-bold px-2 py-1 rounded shadow tracking-wider uppercase">PEDIATRICS</div>
+            </div>
+            <div class="p-6 space-y-3">
+              <div class="flex items-center gap-2 text-xs text-gray-500 font-semibold">
+                <span>May 15, 2026</span>
+                <span>•</span>
+                <span>4 min read</span>
+              </div>
+              <h3 class="text-lg font-bold font-serif text-navy-dark hover:text-gold-accent transition-colors leading-snug">
+                <a href="#">Pediatric Dental Health: Preventing Childhood Decay</a>
+              </h3>
+              <p class="text-gray-600 tracking-wide text-xs leading-relaxed tracking-wide">
+                Simple nutritional habits, preventative sealants, and fluoride guides for children's healthy smiles.
+              </p>
+            </div>
+          </div>
+          <div class="p-6 pt-0 flex items-center justify-between border-t border-gray-50 mt-4">
+            <div class="flex items-center gap-2">
+              <div class="w-8 h-8 rounded-full bg-teal-light flex items-center justify-center text-gold-accent font-bold text-xs shrink-0">FK</div>
+              <span class="text-[10px] font-bold text-gray-600 tracking-wide">Dr. Ferah Khanna</span>
+            </div>
+            <a href="#" class="text-xs font-bold text-gold-accent hover:text-gold-hover flex items-center gap-1">
+              <span>Read article</span>
+              <i class="fa-solid fa-chevron-right text-[9px]"></i>
+            </a>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </main>
+<!-- ==================== GLOBAL FOOTER ==================== -->
+  <footer class="bg-navy-dark text-white pt-16 pb-8 px-4 md:px-8 border-t border-border-color">
+    <div class="max-w-7xl mx-auto">
+      
+      <!-- Top Grid Layout -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-10 mb-16">
+        
+        <!-- Brand column -->
+        <div class="space-y-6">
+          <div class="flex items-center gap-3">
+            <i class="fa-solid fa-tooth text-2xl text-white"></i>
+            <span class="text-xl font-bold font-serif text-white tracking-wide uppercase">ALPHA DENTAL INTERNATIONAL</span>
+          </div>
+          <p class="text-gray-400 text-sm leading-relaxed tracking-wide font-sans">
+            Modern clinical hygiene prosthodontist center dedicated to aesthetic alignments, whitening, implants, and same-day dental emergency surgeries in First Floor, E 18, GK-1, Block R, Greater Kailash I, New Delhi - 110048 (Above NM-PET Scan).
+          </p>
+        </div>
+
+        <!-- Active Timings -->
+        <div class="space-y-6">
+          <h3 class="text-white font-bold uppercase tracking-wider text-sm">ACTIVE TIMING</h3>
+          <div class="space-y-2 text-sm text-gray-400 font-semibold font-sans">
+            <p>Tuesday to Saturday</p>
+            <p class="text-white font-bold">11:00 AM – 5:00 PM</p>
+            <p class="text-gold-accent flex items-center gap-2" id="footer-status-container">
+              <span id="footer-status-dot" class="w-2.5 h-2.5 bg-green-500 rounded-full inline-block animate-pulse"></span>
+              <span id="footer-status-text">Open Now (11 AM - 5 PM)</span>
+            </p>
+          </div>
+        </div>
+
+        <!-- Helpline -->
+        <div class="space-y-6">
+          <h3 class="text-white font-bold uppercase tracking-wider text-sm">DENTAL HELPLINE</h3>
+          <ul class="space-y-4 text-sm text-gray-400 font-semibold">
+            <li class="flex items-center gap-3">
+              <i class="fa-solid fa-phone text-gold-accent shrink-0"></i>
+              <a href="tel:08599970005" class="hover:text-gold-accent transition-colors">085999 70005</a>
+            </li>
+            <li class="flex items-center gap-3">
+              <i class="fa-solid fa-envelope text-gold-accent shrink-0"></i>
+              <a href="mailto:delhidentalclinicindia@gmail.com" class="hover:text-gold-accent transition-colors">delhidentalclinicindia@gmail.com</a>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+
+      <!-- Bottom Bar -->
+      <div class="pt-8 border-t border-border-color/20 flex flex-col sm:flex-row justify-between items-center gap-4 text-xs text-gray-400 font-medium">
+        
+        <!-- Left: Scroll to Top + Copyright -->
+        <div class="flex items-center gap-4">
+          <button onclick="window.scrollTo({top: 0, behavior: 'smooth'})" class="w-10 h-10 bg-white hover:bg-gold-accent text-navy-dark hover:text-white rounded-full flex items-center justify-center transition-all shadow-md" aria-label="Scroll to top">
+            <i class="fa-solid fa-arrow-up"></i>
+          </button>
+          <p>Copyright © 2026 Alpha Dental International. All Rights Reserved.</p>
+        </div>
+
+        <!-- Right: Powered By -->
+        <div>
+          <p>Powered by <span class="font-bold text-white">VERTEX.DIGITAL</span></p>
+        </div>
+
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- Sticky Floating Action Buttons -->
+  <div class="fixed bottom-6 right-6 z-50 flex flex-col gap-3">
+    <!-- Phone Call Button -->
+    <a href="tel:08599970005" class="w-14 h-14 bg-navy-blue hover:bg-navy-dark text-white rounded-full flex items-center justify-center shadow-2xl transition-all hover:scale-110" aria-label="Call Helpline">
+      <i class="fa-solid fa-phone text-xl"></i>
+    </a>
+    <!-- Chat Message Button -->
+    <a href="https://wa.me/918700706766" target="_blank" class="w-14 h-14 bg-[#0dfd87]/90 hover:bg-[#0bc067] text-white rounded-full flex items-center justify-center shadow-2xl transition-all hover:scale-110" aria-label="Chat WhatsApp">
+      <i class="fa-solid fa-message text-xl"></i>
+    </a>
+  </div>
+
+  
+  <script>
+    // 1. Mobile Menu Toggles
+    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenuClose = document.getElementById('mobile-menu-close');
+    const mobileMenuOverlay = document.getElementById('mobile-menu-overlay');
+    const mobileMenuDrawer = document.getElementById('mobile-menu-drawer');
+    const drawerBookingBtn = document.getElementById('mobile-drawer-booking-btn');
+
+    function openMobileMenu() {
+      mobileMenuOverlay.classList.remove('hidden');
+      setTimeout(() => mobileMenuOverlay.classList.add('opacity-100'), 10);
+      mobileMenuDrawer.classList.remove('translate-x-full');
+    }
+
+    function closeMobileMenu() {
+      mobileMenuOverlay.classList.remove('opacity-100');
+      mobileMenuDrawer.classList.add('translate-x-full');
+      setTimeout(() => mobileMenuOverlay.classList.add('hidden'), 300);
+    }
+
+    mobileMenuBtn.addEventListener('click', openMobileMenu);
+    mobileMenuClose.addEventListener('click', closeMobileMenu);
+    mobileMenuOverlay.addEventListener('click', closeMobileMenu);
+    drawerBookingBtn.addEventListener('click', closeMobileMenu);
+
+    // Close menu when clicking links
+    document.querySelectorAll('#mobile-menu-drawer nav a').forEach(link => {
+      link.addEventListener('click', closeMobileMenu);
+    });
+
+    // 2. Hero Background Image Slider Logic
+    const slides = document.querySelectorAll('.hero-slider-item');
+    let currentSlide = 0;
+
+    function nextSlide() {
+      slides[currentSlide].classList.remove('active');
+      currentSlide = (currentSlide + 1) % slides.length;
+      slides[currentSlide].classList.add('active');
+    }
+
+    // Cycle every 5 seconds
+    setInterval(nextSlide, 5000);
+
+    // 3. Navigation Underline Active Link Highlighting on Scroll
+    const navLinks = document.querySelectorAll('header nav a');
+    const sections = document.querySelectorAll('section, main');
+
+    window.addEventListener('scroll', () => {
+      let currentSectionId = '';
+      const scrollPosition = window.scrollY + 160;
+
+      sections.forEach(section => {
+        const sectionTop = section.offsetTop;
+        const sectionHeight = section.offsetHeight;
+        if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
+          currentSectionId = section.getAttribute('id');
+        }
+      });
+
+      navLinks.forEach(link => {
+        link.classList.remove('active-nav-link');
+        const href = link.getAttribute('href');
+        if (href === '#' && currentSectionId === 'home') {
+          link.classList.add('active-nav-link');
+        } else if (href === `#${currentSectionId}`) {
+          link.classList.add('active-nav-link');
+        }
+      });
+    });
+
+    // 4. Booking Form Submission Handler
+    document.getElementById('appointment-form').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const patientName = document.getElementById('full-name').value;
+      const selectedService = document.getElementById('service').options[document.getElementById('service').selectedIndex].text;
+      const selectedDate = document.getElementById('date').value;
+
+      alert(`Appointment Request Received!\n\nPatient: ${patientName}\nService: ${selectedService}\nPreferred Date: ${selectedDate}\n\nOur coordinator will contact you shortly to finalize the slot.`);
+      this.reset();
+    });
+
+    // 5. Dynamic Clinic Open/Closed Hours Script
+    function updateClinicStatus() {
+      const now = new Date();
+      const day = now.getDay();
+      const hour = now.getHours();
+      
+      const statusDot = document.getElementById('clinic-status-dot');
+      const statusText = document.getElementById('clinic-status-text');
+      const fStatusDot = document.getElementById('footer-status-dot');
+      const fStatusText = document.getElementById('footer-status-text');
+      
+      // Tuesday (2) through Saturday (6)
+      // Hours: 11:00 AM to 5:00 PM (11 to 17)
+      const isOpenDay = (day >= 2 && day <= 6);
+      const isOpenHour = (hour >= 11 && hour < 17);
+      
+      if (isOpenDay && isOpenHour) {
+        if(statusDot) {
+          statusDot.className = "w-1.5 h-1.5 bg-emerald-500 rounded-full animate-ping";
+          statusText.className = "text-emerald-400 font-bold tracking-wider uppercase";
+          statusText.textContent = "Open Now (closes at 5:00 PM)";
+        }
+        if(fStatusDot) {
+          fStatusDot.className = "w-2.5 h-2.5 bg-green-500 rounded-full inline-block animate-pulse";
+          fStatusText.className = "text-emerald-400 font-bold";
+          fStatusText.textContent = "Open Now (11:00 AM - 5:00 PM)";
+        }
+      } else {
+        if(statusDot) {
+          statusDot.className = "w-1.5 h-1.5 bg-rose-500 rounded-full";
+          statusText.className = "text-rose-400 font-bold tracking-wider uppercase";
+          statusText.textContent = "Closed Now";
+        }
+        if(fStatusDot) {
+          fStatusDot.className = "w-2.5 h-2.5 bg-rose-500 rounded-full inline-block";
+          fStatusText.className = "text-rose-400 font-bold text-xs";
+          fStatusText.textContent = "Closed Now";
+        }
+      }
+    }
+    updateClinicStatus();
+  </script>
+</body>
+</html>

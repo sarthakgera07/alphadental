@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Alpha Dental International - CTA Section</title>
+<!-- Tailwind CSS v3 CDN -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'dental-navy': '#16243e',
+            'dental-gold': '#d4af37',
+            'dental-gold-hover': '#c19b2d',
+          }
+        }
+      }
+    }
+  </script>
+<style data-purpose="custom-shadows">
+    /* Custom shadow to match the depth in the reference image */
+    .cta-container-shadow {
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+    }
+    
+    /* Background gradient to simulate the soft lighting behind the card */
+    .page-background {
+      background: linear-gradient(to bottom, #d1d5db 0%, #ffffff 50%, #d1d5db 100%);
+      min-height: 400px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  </style>
+</head>
+<body class="bg-gray-100 font-sans antialiased">
+<!-- BEGIN: CTA Banner Section -->
+<main class="page-background p-8" data-purpose="cta-section-wrapper">
+<!-- This is the main Call to Action container with dark navy background -->
+<section class="bg-dental-navy w-full max-w-6xl rounded-[40px] p-12 md:p-16 flex flex-col md:flex-row items-center justify-between cta-container-shadow" data-purpose="cta-banner-card">
+<!-- BEGIN: Text Content Block -->
+<div class="text-white text-center md:text-left mb-8 md:mb-0" data-purpose="cta-text-content">
+<h2 class="text-3xl md:text-4xl font-bold mb-4">
+          Need a Custom Treatment Plan?
+        </h2>
+<p class="text-gray-400 text-lg md:text-xl max-w-2xl">
+          Our specialists will create a personalized solution for your unique dental needs.
+        </p>
+</div>
+<!-- END: Text Content Block -->
+<!-- BEGIN: Action Button Block -->
+<div class="flex-shrink-0" data-purpose="cta-button-container">
+<a class="inline-block bg-dental-gold hover:bg-dental-gold-hover text-dental-navy font-bold py-4 px-10 rounded-2xl transition-colors duration-300 text-lg shadow-lg" href="#" role="button">
+          Get Consultation
+        </a>
+</div>
+<!-- END: Action Button Block -->
+</section>
+</main>
+<!-- END: CTA Banner Section -->
+</body></html>

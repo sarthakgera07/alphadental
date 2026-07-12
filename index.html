@@ -1,0 +1,1396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  
+  <!-- SEO Meta Tags -->
+  <title>Alpha Dental International International | Delhi's Premier Dental Clinic</title>
+  <meta name="description" content="Experience world-class dental care led by Dr. Alpha Dental and our team of expert specialists in South Delhi. Specialized orthodontic braces, implants, micro-endodontics, and pediatric care." />
+  <meta name="keywords" content="Delhi Dental, Orthodontics, Invisalign, Implants, Root Canal, Dr. Alpha Dental, GK-1 Dental Clinic" />
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  
+  <!-- FontAwesome Icons -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
+  
+  <!-- Core Design System Custom Styles -->
+  <link href="index.css" rel="stylesheet"/>
+
+  <!-- Tailwind Theme Customizations -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'navy-blue': '#1B365D',
+            'navy-dark': '#0B1A30',
+            'gold-accent': '#C5A059',
+            'gold-hover': '#B48F48',
+            'light-blue': '#F0F4F8',
+            'white': '#FFFFFF',
+            'light-gray': '#F8FAFC',
+            'dark-text': '#1F2937',
+            'border-color': '#E2E8F0'
+          },
+          fontFamily: {
+            serif: ['"Source Serif 4"', 'serif'],
+            sans: ['"Hanken Grotesk"', 'sans-serif']
+          },
+          boxShadow: {
+            'level-1': '0px 4px 20px rgba(15, 23, 42, 0.05)',
+            'level-2': '0px 10px 30px rgba(15, 23, 42, 0.08)'
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="font-sans antialiased text-[#191c1e] bg-white">
+
+  <!-- ==================== TOP BAR ==================== -->
+  <div class="bg-navy-dark text-white text-[11px] py-2 px-4 md:px-8 flex justify-between items-center border-b border-border-color z-50 relative">
+    <div class="flex items-center gap-6">
+      <div class="flex items-center gap-2">
+        <i class="fa-solid fa-location-dot text-gold-accent"></i>
+        <span>First Floor, E 18, GK-1, Block R, Greater Kailash I, New Delhi - 110048 (Above NM-PET Scan)</span>
+      </div>
+      <div class="hidden sm:flex items-center gap-2">
+        <i class="fa-solid fa-phone text-gold-accent"></i>
+        <span>085999 70005</span>
+      </div>
+    </div>
+    <div class="flex items-center gap-2" id="clinic-status-container">
+      <span id="clinic-status-dot" class="w-1.5 h-1.5 bg-gold-accent rounded-full animate-ping"></span>
+      <span id="clinic-status-text" class="text-gray-500 font-semibold tracking-wider uppercase">Open Today till 5:00 PM</span>
+    </div>
+  </div>
+
+  <!-- ==================== NAVIGATION HEADER ==================== -->
+  <header class="sticky top-0 z-40 bg-navy-dark text-white px-4 md:px-8 py-3.5 flex items-center justify-between border-b border-border-color/10 shadow-lg">
+    <!-- Logo Section -->
+    <a href="#" class="flex items-center gap-3 group">
+      <div class="w-10 h-10 flex items-center justify-center bg-navy-blue text-gold-accent rounded-md shadow-md shrink-0 border border-gold-accent/20">
+        <i class="fa-solid fa-tooth text-2xl transition-transform group-hover:scale-110"></i>
+      </div>
+      <div class="flex flex-col">
+        <span class="text-base md:text-lg font-bold tracking-wider text-white font-serif leading-none">ALPHA DENTAL</span>
+        <span class="text-[9px] tracking-[0.18em] text-gold-accent font-semibold">INTERNATIONAL</span>
+      </div>
+    </a>
+
+    <!-- Desktop Navigation (Screenshot items) -->
+    <nav class="hidden lg:flex items-center gap-6 text-xs font-bold uppercase tracking-wider text-gray-300">
+      <a class="hover:text-gold-accent transition-colors" href="#chief-doctor">FOUNDER</a>
+      <a class="hover:text-gold-accent transition-colors" href="#services">SERVICES</a>
+      <a class="hover:text-gold-accent transition-colors" href="#team">OUR SPECIALISTS</a>
+      <a class="hover:text-gold-accent transition-colors" href="#clinic-tour">CLINIC TOUR</a>
+      <a class="hover:text-gold-accent transition-colors" href="#testimonials">PATIENT STORIES</a>
+      <a class="hover:text-gold-accent transition-colors" href="#booking">FIND US</a>
+    </nav>
+
+    <!-- Header Actions -->
+    <div class="flex items-center gap-5">
+      <a href="tel:08599970005" class="hidden sm:flex items-center gap-2 text-sm font-bold text-gray-300 hover:text-gold-accent transition-colors">
+        <i class="fa-solid fa-phone text-gold-accent"></i>
+        <span>085999 70005</span>
+      </a>
+      <a href="#booking" class="bg-navy-blue hover:bg-navy-dark border border-gold-accent/30 hover:border-gold-accent text-white px-5 py-2.5 rounded-md text-xs font-bold flex items-center gap-2 transition-all shadow-md hover:shadow-lg">
+        <span>BOOK NOW</span>
+      </a>
+      <!-- Mobile hamburger menu button -->
+      <button id="mobile-menu-btn" class="lg:hidden p-2 rounded-md border border-border-color/10 text-white hover:bg-navy-blue" aria-label="Toggle Navigation Menu">
+        <i class="fa-solid fa-bars text-lg"></i>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Menu Overlay -->
+  <div id="mobile-menu-overlay" class="fixed inset-0 bg-black/50 z-50 hidden transition-opacity duration-300"></div>
+  <!-- Mobile Drawer Panel -->
+  <div id="mobile-menu-drawer" class="fixed top-0 bottom-0 right-0 w-80 bg-white z-50 translate-x-full transition-transform duration-300 ease-in-out p-6 shadow-2xl flex flex-col justify-between">
+    <div>
+      <div class="flex items-center justify-between pb-6 border-b border-border-color">
+        <div class="flex items-center gap-2">
+          <i class="fa-solid fa-tooth text-gold-accent text-2xl"></i>
+          <span class="text-lg font-bold font-serif text-navy-dark">Alpha Dental International</span>
+        </div>
+        <button id="mobile-menu-close" class="p-2 text-gray-500 hover:text-navy-dark" aria-label="Close menu">
+          <i class="fa-solid fa-xmark text-xl"></i>
+        </button>
+      </div>
+      <nav class="flex flex-col gap-4 py-6 text-base font-semibold text-dark-text">
+        <a class="hover:text-gold-accent transition-colors py-1.5 border-b border-gray-50" href="#home">Home</a>
+        <a class="hover:text-gold-accent transition-colors py-1.5 border-b border-gray-50" href="#chief-doctor">Founder</a>
+        <a class="hover:text-gold-accent transition-colors py-1.5 border-b border-gray-50" href="#team">Our Specialists</a>
+        <a class="hover:text-gold-accent transition-colors py-1.5 border-b border-gray-50" href="#clinic-tour">Clinic Tour</a>
+        <a class="hover:text-gold-accent transition-colors py-1.5 border-b border-gray-50" href="#services">Services</a>
+        <a class="hover:text-gold-accent transition-colors py-1.5 border-b border-gray-50" href="#testimonials">Testimonials</a>
+        <a class="hover:text-gold-accent transition-colors py-1.5 border-b border-gray-50" href="blogs.html">Blogs</a>
+        <a class="hover:text-gold-accent transition-colors py-1.5 border-b border-gray-50" href="#booking">Contacts</a>
+      </nav>
+    </div>
+    <div class="border-t border-border-color pt-6 space-y-4">
+      <div class="text-xs text-gray-500">
+        <p class="font-bold text-navy-dark">Quick Contact</p>
+        <p class="mt-1">085999 70005</p>
+        <p>delhidentalclinicindia@gmail.com</p>
+      </div>
+      <a href="#booking" id="mobile-drawer-booking-btn" class="w-full bg-gold-accent text-white py-3 rounded-md text-sm font-bold flex items-center justify-center gap-2 shadow-md">
+        <i class="fa-solid fa-calendar-check"></i>
+        <span>Book Appointment</span>
+      </a>
+    </div>
+  </div>
+
+  <!-- ==================== HERO SECTION (WITH DYNAMIC ANIMATIONS) ==================== -->
+  <main id="home" class="relative min-h-[calc(100vh-100px)] flex items-center overflow-hidden bg-navy-dark text-white py-16">
+    <!-- Background Image -->
+    <div class="absolute inset-0 z-0 overflow-hidden">
+      <img alt="State of the Art Dental Clinic" class="w-full h-full object-cover opacity-25" src="clinic_single.jpg"/>
+      <div class="absolute inset-0 hero-gradient-overlay"></div>
+    </div>
+
+    <!-- Content Area -->
+    <div class="relative z-10 max-w-7xl mx-auto px-4 md:px-8 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center w-full">
+      
+      <!-- Hero Left Text Column (Screenshot text & items) -->
+      <div class="lg:col-span-7 space-y-6">
+        <!-- Eyebrow Pill -->
+        <div class="inline-flex items-center gap-2 border border-gold-accent/40 bg-gold-accent/10 px-4 py-1.5 rounded-full animate-text-reveal" id="hero-status-container">
+          <span id="hero-status-dot" class="w-2 h-2 bg-green-500 rounded-full inline-block animate-pulse"></span>
+          <span id="hero-status-text" class="text-xs font-semibold tracking-widest text-gold-accent uppercase font-sans">Open Now (11 AM - 5 PM)</span>
+        </div>
+        
+        <!-- Large Heading -->
+        <h1 class="text-4xl sm:text-5xl md:text-6xl font-bold leading-tight text-white mb-4 font-serif">
+          Exceptional<br/>
+          <span class="text-gold-accent font-bold">Dental Care</span>
+        </h1>
+        
+        <!-- Description -->
+        <p class="text-gray-300 text-sm sm:text-base md:text-lg leading-relaxed tracking-wide max-w-xl animate-text-reveal delay-300 font-sans">
+          With our team of experienced dentists and state-of-the-art technology, we deliver comprehensive treatments in a comfortable and welcoming environment.
+        </p>
+        
+        <!-- Value Props Features list (2 Columns from screenshot) -->
+        <div class="grid grid-cols-2 gap-x-6 gap-y-3.5 pt-4 text-xs sm:text-sm text-gray-300 font-semibold font-sans">
+          <div class="flex items-center gap-2">
+            <i class="fa-solid fa-circle-check text-gold-accent text-sm"></i>
+            <span>Clinical Excellence</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <i class="fa-solid fa-circle-check text-gold-accent text-sm"></i>
+            <span>100% Painless Tech</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <i class="fa-solid fa-circle-check text-gold-accent text-sm"></i>
+            <span>Silver Medalist Doctor</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <i class="fa-solid fa-circle-check text-gold-accent text-sm"></i>
+            <span>Sterilized Standards</span>
+          </div>
+        </div>
+
+        <!-- Hero Actions group -->
+        <div class="flex flex-wrap items-center gap-4 pt-6">
+          <a href="#booking" class="bg-gold-accent hover:bg-gold-hover text-navy-dark px-8 py-3.5 rounded-md font-bold text-sm tracking-wider flex items-center gap-2 transition-all shadow-md btn-pulse-glow">
+            <span>BOOK APPOINTMENT</span>
+          </a>
+          <a href="tel:08599970005" class="border-2 border-white/45 text-white hover:bg-white hover:text-navy-dark px-8 py-3.5 rounded-md font-bold text-sm tracking-wider transition-all flex items-center gap-2 shadow-sm">
+            <i class="fa-solid fa-phone"></i>
+            <span>CALL: 085999 70005</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Hero Right Side Form Card (Schedule Visit 3-Step Interactive scheduler) -->
+      <div class="lg:col-span-5 w-full flex justify-center lg:justify-end">
+        <div class="bg-white/95 backdrop-blur-md border border-white/20 p-6 md:p-8 rounded-2xl shadow-2xl text-navy-dark w-full max-w-md relative overflow-hidden transition-all duration-300">
+          
+          <h2 class="text-xl font-bold text-center text-navy-dark mb-6 font-serif">Schedule Visit</h2>
+          
+          <!-- Step Indicator bar -->
+          <div class="flex items-center justify-between max-w-xs mx-auto mb-8 relative">
+            <div class="absolute left-0 right-0 top-1/2 h-0.5 bg-gray-200 -translate-y-1/2 z-0"></div>
+            <!-- Connection highlights lines -->
+            <div id="step-line-highlight-1" class="absolute left-0 w-0 top-1/2 h-0.5 bg-gold-accent -translate-y-1/2 z-0 transition-all duration-300"></div>
+            
+            <!-- Step circles -->
+            <div id="step-circle-1" class="w-8 h-8 rounded-full bg-navy-blue text-white flex items-center justify-center font-bold text-sm z-10 border-2 border-navy-blue relative transition-all duration-300">1</div>
+            <div id="step-circle-2" class="w-8 h-8 rounded-full bg-gray-100 text-gray-400 flex items-center justify-center font-bold text-sm z-10 border-2 border-gray-200 relative transition-all duration-300">2</div>
+            <div id="step-circle-3" class="w-8 h-8 rounded-full bg-gray-100 text-gray-400 flex items-center justify-center font-bold text-sm z-10 border-2 border-gray-200 relative transition-all duration-300">3</div>
+          </div>
+
+          <!-- Step Forms Wrapper -->
+          <form id="hero-multi-step-form" class="space-y-5">
+            
+            <!-- STEP 1: General Info -->
+            <div id="hero-step-1" class="space-y-4">
+              <div class="space-y-1">
+                <label class="text-[10px] font-bold text-navy-blue uppercase tracking-wider">Full Name *</label>
+                <input required type="text" id="hero-name" placeholder="Enter full name" class="w-full px-4 py-3 rounded-lg border border-gray-200 focus:outline-none focus:border-gold-accent text-sm font-sans" />
+              </div>
+              <div class="space-y-1">
+                <label class="text-[10px] font-bold text-navy-blue uppercase tracking-wider">Email Address (Optional)</label>
+                <input type="email" id="hero-email" placeholder="name@email.com" class="w-full px-4 py-3 rounded-lg border border-gray-200 focus:outline-none focus:border-gold-accent text-sm font-sans" />
+              </div>
+              <div class="space-y-1">
+                <label class="text-[10px] font-bold text-navy-blue uppercase tracking-wider">Phone Number *</label>
+                <div class="flex gap-2">
+                  <div class="px-3 py-3 bg-gray-100 border border-gray-200 rounded-lg text-sm text-gray-500 font-bold shrink-0">IN +91</div>
+                  <input required type="tel" id="hero-phone" placeholder="10-digit number" class="w-full px-4 py-3 rounded-lg border border-gray-200 focus:outline-none focus:border-gold-accent text-sm font-sans" />
+                </div>
+              </div>
+              <button type="button" onclick="goHeroStep2()" class="w-full bg-navy-dark hover:bg-navy-blue text-white py-3.5 rounded-lg font-bold text-xs uppercase tracking-wider transition-colors shadow-md mt-2">
+                Next Step
+              </button>
+            </div>
+
+            <!-- STEP 2: Service & Specialist selection -->
+            <div id="hero-step-2" class="space-y-4 hidden">
+              <div class="space-y-1">
+                <label class="text-[10px] font-bold text-navy-blue uppercase tracking-wider">Select Treatment Category *</label>
+                <select id="hero-service" class="w-full px-4 py-3 rounded-lg border border-gray-200 focus:outline-none focus:border-gold-accent text-sm font-semibold font-sans bg-white">
+                  <option value="Orthodontics Aligners">Orthodontics Aligners</option>
+                  <option value="Microscopic RCT">Microscopic RCT</option>
+                  <option value="Pedodontics Kids Care">Pedodontics Kids Care</option>
+                  <option value="Full Mouth Rehabilitation">Full Mouth Rehabilitation</option>
+                  <option value="Dental Crowns & Veneers">Dental Crowns & Veneers</option>
+                  <option value="Cosmetic Whitening">Cosmetic Whitening</option>
+                </select>
+              </div>
+              <div class="space-y-1">
+                <label class="text-[10px] font-bold text-navy-blue uppercase tracking-wider">Select Preferred Specialist</label>
+                <select id="hero-specialist" class="w-full px-4 py-3 rounded-lg border border-gray-200 focus:outline-none focus:border-gold-accent text-sm font-semibold font-sans bg-white">
+                  <option value="Dr. Alpha Dental">Dr. Alpha Dental (Professor & Fellow)</option>
+                  <option value="Dr. Aman Prasad">Dr. Aman Prasad (Implantologist)</option>
+                  <option value="Dr. Rohit Sharma">Dr. Rohit Sharma (RCT Specialist)</option>
+                  <option value="Any Specialist">Any Available Specialist</option>
+                </select>
+              </div>
+              <div class="flex gap-3 pt-2">
+                <button type="button" onclick="goHeroStep1()" class="w-1/3 border border-gray-300 hover:bg-gray-50 text-gray-600 py-3.5 rounded-lg font-bold text-xs uppercase tracking-wider transition-colors">
+                  Back
+                </button>
+                <button type="button" onclick="goHeroStep3()" class="w-2/3 bg-navy-dark hover:bg-navy-blue text-white py-3.5 rounded-lg font-bold text-xs uppercase tracking-wider transition-colors shadow-md">
+                  Next Step
+                </button>
+              </div>
+            </div>
+
+            <!-- STEP 3: Booking details & Submit -->
+            <div id="hero-step-3" class="space-y-4 hidden">
+              <div class="space-y-1">
+                <label class="text-[10px] font-bold text-navy-blue uppercase tracking-wider">Preferred Date *</label>
+                <input required type="date" id="hero-date" class="w-full px-4 py-3 rounded-lg border border-gray-200 focus:outline-none focus:border-gold-accent text-sm font-sans" />
+              </div>
+              <div class="space-y-1">
+                <label class="text-[10px] font-bold text-navy-blue uppercase tracking-wider">Preferred Time Slot *</label>
+                <select id="hero-time" class="w-full px-4 py-3 rounded-lg border border-gray-200 focus:outline-none focus:border-gold-accent text-sm font-semibold font-sans bg-white">
+                  <option value="11:00 AM - 1:00 PM">11:00 AM - 1:00 PM</option>
+                  <option value="1:00 PM - 3:00 PM">1:00 PM - 3:00 PM</option>
+                  <option value="3:00 PM - 5:00 PM">3:00 PM - 5:00 PM</option>
+                </select>
+              </div>
+              
+              <!-- Term disclosure -->
+              <p class="text-[10px] text-gray-400 leading-normal italic text-center">
+                * By submitting, you request slot locking. We will confirm details within 2 hours.
+              </p>
+              
+              <div class="flex gap-3">
+                <button type="button" onclick="backToHeroStep2()" class="w-1/3 border border-gray-300 hover:bg-gray-50 text-gray-600 py-3.5 rounded-lg font-bold text-xs uppercase tracking-wider transition-colors">
+                  Back
+                </button>
+                <button type="submit" class="w-2/3 bg-gold-accent hover:bg-gold-hover text-navy-dark py-3.5 rounded-lg font-bold text-xs uppercase tracking-wider transition-colors shadow-md">
+                  Book Slot
+                </button>
+              </div>
+            </div>
+
+            <!-- SUCCESS MESSAGE OVERLAY CARD -->
+            <div id="hero-success-panel" class="absolute inset-0 bg-white/98 z-20 flex flex-col items-center justify-center p-6 text-center hidden">
+              <div class="w-16 h-16 bg-green-100 text-green-600 rounded-full flex items-center justify-center mb-4 shadow-inner">
+                <i class="fa-solid fa-circle-check text-3xl"></i>
+              </div>
+              <h3 class="text-lg font-bold text-navy-dark font-serif mb-2">Slot Booking Requested</h3>
+              <p id="hero-success-text" class="text-xs text-gray-500 leading-relaxed max-w-xs mb-6">
+                Thank you! Our coordinator will contact you shortly to confirm your preferred slot.
+              </p>
+              <button type="button" onclick="resetHeroForm()" class="px-6 py-2.5 bg-navy-dark text-white rounded-lg text-xs font-bold uppercase tracking-wider shadow hover:bg-navy-blue transition-colors">
+                Back to Start
+              </button>
+            </div>
+
+          </form>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- ==================== STATS BANNER SECTION ==================== -->
+  <section class="bg-white py-12 relative z-20">
+    <div class="max-w-7xl mx-auto px-4 md:px-8">
+      <div class="bg-navy-dark text-white rounded-3xl py-10 px-6 md:px-12 shadow-[0_15px_45px_rgba(15,23,42,0.08)] border border-white/5 grid grid-cols-2 md:grid-cols-4 gap-y-8 gap-x-4 text-center items-center">
+        <!-- Stat 1 -->
+        <div class="space-y-1">
+          <div class="text-3xl md:text-4xl lg:text-5xl font-extrabold tracking-tight text-white font-serif">16+</div>
+          <div class="text-[9px] md:text-[10px] font-bold uppercase tracking-widest text-gray-400">YEARS EXPERIENCE</div>
+        </div>
+        <!-- Stat 2 -->
+        <div class="space-y-1 border-l border-white/10">
+          <div class="text-3xl md:text-4xl lg:text-5xl font-extrabold tracking-tight text-white font-serif">1,000+</div>
+          <div class="text-[9px] md:text-[10px] font-bold uppercase tracking-widest text-gray-400">HAPPY PATIENTS</div>
+        </div>
+        <!-- Stat 3 -->
+        <div class="space-y-1 md:border-l border-white/10">
+          <div class="text-3xl md:text-4xl lg:text-5xl font-extrabold tracking-tight text-white font-serif">15+</div>
+          <div class="text-[9px] md:text-[10px] font-bold uppercase tracking-widest text-gray-400">DENTAL SERVICES</div>
+        </div>
+        <!-- Stat 4 -->
+        <div class="space-y-1 border-l border-white/10">
+          <div class="text-3xl md:text-4xl lg:text-5xl font-extrabold tracking-tight text-white font-serif">5.0/5</div>
+          <div class="text-[9px] md:text-[10px] font-bold uppercase tracking-widest text-gray-400">RATED ON GOOGLE</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== CHIEF DOCTOR SECTION ==================== -->
+  <section id="chief-doctor" class="py-32 bg-white relative overflow-hidden"><div class="ambient-glow absolute inset-0 w-full h-full -z-10 pointer-events-none"></div>
+    <!-- Abstract Design Accents -->
+    <div class="absolute right-0 top-1/4 w-96 h-96 bg-teal-light/40 rounded-full blur-3xl -z-10"></div>
+    
+    <div class="max-w-7xl mx-auto px-4 md:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
+        
+        <!-- Left: Image Portrait -->
+        <div class="lg:col-span-5 relative">
+          <!-- Ambient decorative card behind image -->
+          <div class="absolute -inset-4 bg-gold-accent/10 rounded-2xl blur-xl -z-10"></div>
+          
+          <div class="bg-gray-light rounded-xl overflow-hidden shadow-xl border border-border-color">
+            <!-- Portrait Image -->
+            <img alt="Dr. Alpha Dental" class="w-full h-auto object-cover max-h-[580px]" src="doctor_portrait.jpg"/>
+            <!-- Embedded info panel inside card -->
+            <div class="bg-navy-dark text-white p-6 border-t-4 border-gold-accent">
+              <h3 class="text-gold-accent font-bold text-base tracking-wider uppercase">Founder &amp; Chief Dental Surgeon</h3>
+              <p class="text-xs text-gray-500 mt-1 uppercase font-semibold">Fellow of the World Federation of Orthodontists (WFO)</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Biography details -->
+        <div class="lg:col-span-7 space-y-6">
+          <div class="space-y-2">
+            <div class="inline-block px-3 py-1 bg-gold-accent/10 text-gold-accent text-[10px] font-bold uppercase tracking-widest rounded">
+              CHIEF SURGEON
+            </div>
+            <h2 class="text-3xl sm:text-4xl font-semibold font-serif text-navy-dark">Dr. Alpha Dental</h2>
+            <p class="text-xs text-gray-500 font-bold uppercase tracking-widest font-sans">BDS(Nair, Mumbai) | MDS(Orthodontics, IDS)</p>
+          </div>
+
+          <div class="w-20 h-1 bg-gold-accent"></div>
+
+          <p class="italic text-gray-700 text-base md:text-lg leading-relaxed tracking-wide font-sans">
+            "Dr. Alpha Dental is a highly accomplished dental professional with over 16 years of extensive clinical and academic mastery. A graduate of the prestigious Nair Hospital Dental College, Mumbai, she is committed to delivering boutique healthcare matching global standards."
+          </p>
+
+          <p class="text-gray-600 tracking-wide text-sm md:text-base leading-relaxed tracking-wide">
+            As a Fellow of the World Federation of Orthodontists and a prominent member of the Peer Review Board for the Journal of Clinical Orthodontics (JCO-IOS), she integrates contemporary technology with smile layout aesthetics to achieve healthy, stable facial structures.
+          </p>
+
+          <!-- Core Academic and Clinical Pillars -->
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4 pt-4">
+            <div class="p-5 border-l-4 border-gold-accent bg-gray-light rounded-r-lg shadow-sm">
+              <h4 class="font-bold text-navy-dark text-sm mb-1 uppercase tracking-wider">Clinical Specialization</h4>
+              <p class="text-xs text-gray-600 tracking-wide leading-relaxed tracking-wide font-semibold">
+                Metal/Ceramic Braces, Invisalign clear aligners, complex bite treatments, &amp; implants.
+              </p>
+            </div>
+            <div class="p-5 border-l-4 border-gold-accent bg-gray-light rounded-r-lg shadow-sm">
+              <h4 class="font-bold text-navy-dark text-sm mb-1 uppercase tracking-wider">Academic Background</h4>
+              <p class="text-xs text-gray-600 tracking-wide leading-relaxed tracking-wide font-semibold">
+                Former Orthodontic Professor at IDS (S'O'A University) &amp; active research editor.
+              </p>
+            </div>
+          </div>
+
+          <div class="pt-2 border-t border-gray-100/80 mt-6 flex items-center justify-between flex-wrap gap-4">
+            <div>
+              <p class="font-serif italic text-lg text-navy-dark font-bold leading-none">Dr. Alpha Dental</p>
+              <p class="text-[9px] text-gold-accent font-bold uppercase tracking-wider mt-1">Founder &amp; Chief Dental Surgeon</p>
+            </div>
+            <div class="font-serif italic text-gray-300 text-xl font-semibold select-none pr-2">
+              Alpha Dental
+            </div>
+          </div>
+          <div class="pt-4">
+            <a href="#home" class="inline-flex items-center gap-2 text-gold-accent hover:text-gold-hover font-bold text-sm tracking-wider uppercase group">
+              <span>Schedule appointment with Dr. Alpha Dental</span>
+              <i class="fa-solid fa-arrow-right-long transition-transform group-hover:translate-x-1.5"></i>
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== SERVICES SECTION ==================== -->
+  <section id="services" class="py-32 bg-gray-light relative overflow-hidden grid-pattern">
+    <div class="max-w-7xl mx-auto px-4 md:px-8">
+      
+      <!-- Top Row: 2 Large Highlight Cards -->
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
+        
+        <!-- Card 1: Basic Dental Care -->
+        <div class="bg-white rounded-[24px] border border-gray-100 p-8 md:p-10 shadow-md flex items-center justify-between gap-6 transition-all hover:shadow-lg hover:-translate-y-1 duration-300">
+          <div class="space-y-4">
+            <h3 class="text-2xl font-bold font-serif text-navy-dark leading-tight">Basic Dental Care</h3>
+            <ul class="space-y-2.5 text-sm text-gray-500 font-semibold font-sans list-disc list-inside">
+              <li>Teeth Cleaning</li>
+              <li>Dental Checkup</li>
+              <li>Preventive Dentistry</li>
+              <li>Bleeding Gums Treatment</li>
+            </ul>
+          </div>
+          <div class="w-2/5 shrink-0 flex justify-end">
+            <img alt="Basic Dental Care patient checkup" class="w-full max-w-[200px] h-auto object-contain rounded-xl" src="dentist_patient.png"/>
+          </div>
+        </div>
+
+        <!-- Card 2: Aesthetic Care -->
+        <div class="bg-white rounded-[24px] border border-gray-100 p-8 md:p-10 shadow-md flex items-center justify-between gap-6 transition-all hover:shadow-lg hover:-translate-y-1 duration-300">
+          <div class="space-y-4">
+            <h3 class="text-2xl font-bold font-serif text-navy-dark leading-tight">Aesthetic Care</h3>
+            <ul class="space-y-2.5 text-sm text-gray-500 font-semibold font-sans list-disc list-inside">
+              <li>Veneers</li>
+              <li>Smile Design</li>
+              <li>Teeth Whitening</li>
+              <li>Teeth Reshaping</li>
+              <li>Smile Makeovers</li>
+            </ul>
+          </div>
+          <div class="w-2/5 shrink-0 flex justify-end">
+            <img alt="Aesthetic Care smile" class="w-full max-w-[120px] h-auto object-contain rounded-xl" src="aesthetic_smile.png"/>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Bottom Grid: 6 Centered Gray Blocks -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        
+        <!-- Block 1: Tooth Repair -->
+        <div onclick="window.location.hash='booking'" class="relative bg-white/70 hover:bg-white rounded-2xl border border-gray-200/50 shadow-sm transition-all duration-300 hover:-translate-y-1.5 hover:shadow-md cursor-pointer h-56 group overflow-hidden">
+          <!-- Default State (Only Title) -->
+          <div class="absolute inset-0 flex items-center justify-center p-6 group-hover:opacity-0 transition-opacity duration-200 z-10">
+            <span class="font-bold text-xl text-navy-dark group-hover:text-gold-accent transition-colors font-sans">Tooth Repair</span>
+          </div>
+
+          <!-- Hover State (Details + Image) -->
+          <div class="absolute inset-0 p-6 flex justify-between items-center opacity-0 group-hover:opacity-100 transition-all duration-300 z-20 bg-white rounded-2xl gap-4">
+            <div class="space-y-2.5 text-left flex-grow">
+              <h4 class="font-bold text-lg text-navy-dark leading-tight font-serif">Tooth Repair</h4>
+              <ul class="space-y-1.5 text-xs text-gray-500 font-semibold list-disc list-inside font-sans">
+                <li>Dental Fillings</li>
+                <li>Conservative Dentistry</li>
+                <li>Root Canal Treatment</li>
+              </ul>
+            </div>
+            <div class="w-24 h-24 sm:w-28 sm:h-28 shrink-0 flex items-center justify-center">
+              <img alt="Tooth Repair" class="w-full h-full object-contain" src="tooth_repair.png"/>
+            </div>
+          </div>
+        </div>
+
+        <!-- Block 2: Tooth Replacement -->
+        <div onclick="window.location.hash='booking'" class="relative bg-white/70 hover:bg-white rounded-2xl border border-gray-200/50 shadow-sm transition-all duration-300 hover:-translate-y-1.5 hover:shadow-md cursor-pointer h-56 group overflow-hidden">
+          <!-- Default State (Only Title) -->
+          <div class="absolute inset-0 flex items-center justify-center p-6 group-hover:opacity-0 transition-opacity duration-200 z-10">
+            <span class="font-bold text-xl text-navy-dark group-hover:text-gold-accent transition-colors font-sans">Tooth Replacement</span>
+          </div>
+
+          <!-- Hover State (Details + Image) -->
+          <div class="absolute inset-0 p-6 flex justify-between items-center opacity-0 group-hover:opacity-100 transition-all duration-300 z-20 bg-white rounded-2xl gap-4">
+            <div class="space-y-2.5 text-left flex-grow">
+              <h4 class="font-bold text-lg text-navy-dark leading-tight font-serif">Tooth Replacement</h4>
+              <ul class="space-y-1.5 text-xs text-gray-500 font-semibold list-disc list-inside font-sans">
+                <li>Crowns & Bridges</li>
+                <li>Complete Dentures</li>
+                <li>Partial Dentures</li>
+                <li>Dental Implants</li>
+              </ul>
+            </div>
+            <div class="w-24 h-24 sm:w-28 sm:h-28 shrink-0 flex items-center justify-center">
+              <img alt="Tooth Replacement" class="w-full h-full object-contain" src="tooth_replacement.png"/>
+            </div>
+          </div>
+        </div>
+
+        <!-- Block 3: Teeth Alignment -->
+        <div onclick="window.location.hash='booking'" class="relative bg-white/70 hover:bg-white rounded-2xl border border-gray-200/50 shadow-sm transition-all duration-300 hover:-translate-y-1.5 hover:shadow-md cursor-pointer h-56 group overflow-hidden">
+          <!-- Default State (Only Title) -->
+          <div class="absolute inset-0 flex items-center justify-center p-6 group-hover:opacity-0 transition-opacity duration-200 z-10">
+            <span class="font-bold text-xl text-navy-dark group-hover:text-gold-accent transition-colors font-sans">Teeth Alignment</span>
+          </div>
+
+          <!-- Hover State (Details + Image) -->
+          <div class="absolute inset-0 p-6 flex justify-between items-center opacity-0 group-hover:opacity-100 transition-all duration-300 z-20 bg-white rounded-2xl gap-4">
+            <div class="space-y-2.5 text-left flex-grow">
+              <h4 class="font-bold text-lg text-navy-dark leading-tight font-serif">Teeth Alignment</h4>
+              <ul class="space-y-1.5 text-xs text-gray-500 font-semibold list-disc list-inside font-sans">
+                <li>Metal Braces</li>
+                <li>Clear Braces</li>
+                <li>Invisible Aligners</li>
+                <li>Jaw Alignment</li>
+              </ul>
+            </div>
+            <div class="w-24 h-24 sm:w-28 sm:h-28 shrink-0 flex items-center justify-center">
+              <img alt="Teeth Alignment" class="w-full h-full object-contain" src="teeth_alignment.png"/>
+            </div>
+          </div>
+        </div>
+
+        <!-- Block 4: Gum Care -->
+        <div onclick="window.location.hash='booking'" class="relative bg-white/70 hover:bg-white rounded-2xl border border-gray-200/50 shadow-sm transition-all duration-300 hover:-translate-y-1.5 hover:shadow-md cursor-pointer h-56 group overflow-hidden">
+          <!-- Default State (Only Title) -->
+          <div class="absolute inset-0 flex items-center justify-center p-6 group-hover:opacity-0 transition-opacity duration-200 z-10">
+            <span class="font-bold text-xl text-navy-dark group-hover:text-gold-accent transition-colors font-sans">Gum Care</span>
+          </div>
+
+          <!-- Hover State (Details + Image) -->
+          <div class="absolute inset-0 p-6 flex justify-between items-center opacity-0 group-hover:opacity-100 transition-all duration-300 z-20 bg-white rounded-2xl gap-4">
+            <div class="space-y-2.5 text-left flex-grow">
+              <h4 class="font-bold text-lg text-navy-dark leading-tight font-serif">Gum Care</h4>
+              <ul class="space-y-1.5 text-xs text-gray-500 font-semibold list-disc list-inside font-sans">
+                <li>Laser Gum Surgery</li>
+                <li>Gum Disease Care</li>
+                <li>Bleeding Gums</li>
+              </ul>
+            </div>
+            <div class="w-24 h-24 sm:w-28 sm:h-28 shrink-0 flex items-center justify-center">
+              <img alt="Gum Care" class="w-full h-full object-contain" src="gum_care.png"/>
+            </div>
+          </div>
+        </div>
+
+        <!-- Block 5: Oral Surgery Care -->
+        <div onclick="window.location.hash='booking'" class="relative bg-white/70 hover:bg-white rounded-2xl border border-gray-200/50 shadow-sm transition-all duration-300 hover:-translate-y-1.5 hover:shadow-md cursor-pointer h-56 group overflow-hidden">
+          <!-- Default State (Only Title) -->
+          <div class="absolute inset-0 flex items-center justify-center p-6 group-hover:opacity-0 transition-opacity duration-200 z-10">
+            <span class="font-bold text-xl text-navy-dark group-hover:text-gold-accent transition-colors font-sans">Oral Surgery Care</span>
+          </div>
+
+          <!-- Hover State (Details + Image) -->
+          <div class="absolute inset-0 p-6 flex justify-between items-center opacity-0 group-hover:opacity-100 transition-all duration-300 z-20 bg-white rounded-2xl gap-4">
+            <div class="space-y-2.5 text-left flex-grow">
+              <h4 class="font-bold text-lg text-navy-dark leading-tight font-serif">Oral Surgery Care</h4>
+              <ul class="space-y-1.5 text-xs text-gray-500 font-semibold list-disc list-inside font-sans">
+                <li>Laser Surgery</li>
+                <li>Surgical Extraction</li>
+                <li>Impacted Wisdom Tooth</li>
+              </ul>
+            </div>
+            <div class="w-24 h-24 sm:w-28 sm:h-28 shrink-0 flex items-center justify-center">
+              <img alt="Oral Surgery Care" class="w-full h-full object-contain" src="oral_surgery.png"/>
+            </div>
+          </div>
+        </div>
+
+        <!-- Block 6: Advanced & Emergency -->
+        <div onclick="window.location.hash='booking'" class="relative bg-white/70 hover:bg-white rounded-2xl border border-gray-200/50 shadow-sm transition-all duration-300 hover:-translate-y-1.5 hover:shadow-md cursor-pointer h-56 group overflow-hidden">
+          <!-- Default State (Only Title) -->
+          <div class="absolute inset-0 flex items-center justify-center p-6 group-hover:opacity-0 transition-opacity duration-200 z-10">
+            <span class="font-bold text-xl text-navy-dark group-hover:text-gold-accent transition-colors font-sans">Advanced & Emergency</span>
+          </div>
+
+          <!-- Hover State (Details + Image) -->
+          <div class="absolute inset-0 p-6 flex justify-between items-center opacity-0 group-hover:opacity-100 transition-all duration-300 z-20 bg-white rounded-2xl gap-4">
+            <div class="space-y-2.5 text-left flex-grow">
+              <h4 class="font-bold text-lg text-navy-dark leading-tight font-serif">Advanced & Emergency</h4>
+              <ul class="space-y-1.5 text-xs text-gray-500 font-semibold list-disc list-inside font-sans">
+                <li>Emergency Pain Relief</li>
+                <li>Trauma Management</li>
+                <li>Same-Day Extractions</li>
+              </ul>
+            </div>
+            <div class="w-24 h-24 sm:w-28 sm:h-28 shrink-0 flex items-center justify-center">
+              <img alt="Advanced & Emergency" class="w-full h-full object-contain" src="advanced_emergency.png"/>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== CONSULTATION CTA BANNER ==================== -->
+  <section class="py-16 bg-gray-light flex items-center justify-center px-4">
+    <div class="bg-navy-dark w-full max-w-6xl rounded-[24px] p-10 md:p-14 flex flex-col md:flex-row items-center justify-between shadow-2xl relative overflow-hidden">
+      <!-- Background subtle lighting highlight -->
+      <div class="absolute -right-10 -bottom-10 w-40 h-40 bg-gold-accent/20 rounded-full blur-2xl"></div>
+      
+      <!-- Text -->
+      <div class="text-white text-center md:text-left mb-8 md:mb-0 space-y-2 relative z-10">
+        <h2 class="text-2xl md:text-3xl font-bold font-serif leading-tight">
+          Need a Custom Treatment Plan?
+        </h2>
+        <p class="text-gray-500 text-sm md:text-base max-w-xl">
+          Our specialized team is ready to evaluate your diagnostic scans and structure a personalized roadmap.
+        </p>
+      </div>
+      <!-- Button -->
+      <div class="flex-shrink-0 relative z-10">
+        <a class="inline-block bg-gold-accent hover:bg-gold-hover text-white font-bold py-3.5 px-8 rounded-lg transition-all duration-300 text-sm tracking-wider shadow-lg hover:shadow-xl hover:-translate-y-0.5" href="#home">
+          GET FREE CONSULTATION
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== EXPERT SPECIALISTS SECTION ==================== -->
+  <section id="team" class="py-24 bg-navy-dark text-white relative overflow-hidden">
+    <!-- Backlighting effect -->
+    <div class="absolute left-0 bottom-0 w-80 h-80 bg-gold-accent/5 rounded-full blur-3xl"></div>
+    
+    <div class="max-w-7xl mx-auto px-4 md:px-8">
+      <!-- Header -->
+      <div class="text-center mb-20 space-y-4">
+        <div class="inline-block px-4 py-1 bg-gold-accent text-[10px] font-bold uppercase tracking-widest text-white mb-2 rounded">
+          OUR SPECIALISTS
+        </div>
+        <h2 class="text-3xl md:text-4xl font-semibold font-serif text-white leading-tight">Meet Our Expert Specialists</h2>
+        <p class="text-gray-400 max-w-2xl mx-auto text-sm md:text-base leading-relaxed tracking-wide">
+          Our team comprises highly qualified, hospital-trained specialists dedicated to providing advanced dental treatments under one roof.
+        </p>
+      </div>
+
+      <!-- Specialists Grid -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        
+        <!-- Specialist 1: Dr. Ferah Khanna -->
+        <div class="bg-white rounded-xl shadow-xl overflow-hidden flex flex-col h-full border border-border-color transition-all hover:-translate-y-1.5 duration-300">
+          <div class="relative h-96 bg-[#dbeafe] overflow-hidden">
+            <span class="absolute top-4 left-4 bg-gold-accent text-white text-[9px] font-bold px-2 py-1 rounded shadow-md tracking-wider">16+ YEARS EXP</span>
+            <img alt="Dr. Ferah Khanna - Pediatric Dentist" class="w-full h-full object-cover object-top" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCdWacLiFfZfwDm7QSeGINyUShh9I37Jz0PeUsq_kip__DiIfvClVO8bNz1jwx5Ubnw0LYCLidYyBrfYA-q0MZTN3en9Dxk7sYoCzumtreXx1QP3SrjpxKaavBa29qCRUEzxLzQcfHUJd80esIVSlbgMiptDCthkBO-rVlTavHAVcIY3faCqq3F-x0RyOoRXk3-TuHUoD838vuS1LzIjJ4tuOWdoYuSiEvZwUEHmQN16ccZjDuWLIdp"/>
+          </div>
+          <div class="p-6 flex-grow flex flex-col justify-between text-navy-dark">
+            <div>
+              <h3 class="text-lg font-bold font-serif mb-0.5">Dr. Ferah Khanna</h3>
+              <p class="text-[10px] font-bold text-gold-accent uppercase tracking-widest mb-4">PEDIATRIC DENTIST</p>
+              
+              <div class="space-y-2 mb-6 text-xs text-gray-600 tracking-wide">
+                <div class="flex gap-2">
+                  <i class="fa-solid fa-shield-heart text-gold-accent shrink-0 mt-0.5"></i>
+                  <span>Child behavior management specialist</span>
+                </div>
+                <div class="flex gap-2">
+                  <i class="fa-solid fa-graduation-cap text-gold-accent shrink-0 mt-0.5"></i>
+                  <span>BDS, MDS (Pedodontics, PGIMER Chandigarh)</span>
+                </div>
+              </div>
+            </div>
+            <div class="bg-gray-light p-3 rounded italic text-[11px] text-gray-500 border-l-2 border-gold-accent font-medium">
+              Expertise in pediatric dental anxieties.
+            </div>
+          </div>
+        </div>
+
+        <!-- Specialist 2: Dr. Sonali Bansal -->
+        <div class="bg-white rounded-xl shadow-xl overflow-hidden flex flex-col h-full border border-border-color transition-all hover:-translate-y-1.5 duration-300">
+          <div class="relative h-96 bg-[#f1f5f9] overflow-hidden">
+            <span class="absolute top-4 left-4 bg-gold-accent text-white text-[9px] font-bold px-2 py-1 rounded shadow-md tracking-wider">ENDODONTIC CHIEF</span>
+            <img alt="Dr. Sonali Bansal - Endodontist" class="w-full h-full object-cover object-top" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBUn1dAP1EyRU_JCXhuCoaxkG-5blZTREEnhWMKh_238ZrOwLRPkocrv5lggIOwgm_2mqvr8cCpALXkpYv3pDsekp63Ys7C0sNEbXScpD6u-EEcTpmz-LF-m3y8k6AacscQeFvgzSYMZrbqNxKoWBGyvpLXPExTnVO-VjMVO_ka4spchN1ej1BoE5GJCLIqU5D16cimcSBzgjnkH_8Ltt4dSbWC_EMKpM0TwU5Yc4MyftPgtmH5mhiZ"/>
+          </div>
+          <div class="p-6 flex-grow flex flex-col justify-between text-navy-dark">
+            <div>
+              <h3 class="text-lg font-bold font-serif mb-0.5">Dr. Sonali Bansal</h3>
+              <p class="text-[10px] font-bold text-gold-accent uppercase tracking-widest mb-4">ENDODONTIST</p>
+              
+              <div class="space-y-2 mb-6 text-xs text-gray-600 tracking-wide">
+                <div class="flex gap-2">
+                  <i class="fa-solid fa-microscope text-gold-accent shrink-0 mt-0.5"></i>
+                  <span>Microscopic Painless Root Canals</span>
+                </div>
+                <div class="flex gap-2">
+                  <i class="fa-solid fa-graduation-cap text-gold-accent shrink-0 mt-0.5"></i>
+                  <span>BDS, MDS (Kalinga Inst. of Dental Sciences)</span>
+                </div>
+              </div>
+            </div>
+            <div class="bg-gray-light p-3 rounded italic text-[11px] text-gray-500 border-l-2 border-gold-accent font-medium">
+              Expert in advanced microscope RCT systems.
+            </div>
+          </div>
+        </div>
+
+        <!-- Specialist 3: Dr. Vinod Khanna -->
+        <div class="bg-white rounded-xl shadow-xl overflow-hidden flex flex-col h-full border border-border-color transition-all hover:-translate-y-1.5 duration-300">
+          <div class="relative h-96 bg-[#ffedd5] overflow-hidden">
+            <span class="absolute top-4 left-4 bg-gold-accent text-white text-[9px] font-bold px-2 py-1 rounded shadow-md tracking-wider">REHABILITATION</span>
+            <img alt="Dr. Vinod Khanna - Prosthodontist" class="w-full h-full object-cover object-top" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCO83-UCaWu4NVuCY4zaLmPF-0DKvXCVUtjCZX5p8pbNaWXJqb7Mr17wgD3qdjlOhip_yssMvHNc8JOSWQJ9yzxPRAaG2ypuZJWKDU1bvaHggCbS13bIiMVcGRqvwlLYn809PN3rDmBi_ZwQy7hIDLLxenGZKROHSO1zCeYymNH7nvODL4erBN844yEJhES2dAjOkzFpv2YjU4PRmq0V6O2H-ZeyHxdKtcSp3jDtF2QuGmE-nIdLn0F"/>
+          </div>
+          <div class="p-6 flex-grow flex flex-col justify-between text-navy-dark">
+            <div>
+              <h3 class="text-lg font-bold font-serif mb-0.5">Dr. Vinod Khanna</h3>
+              <p class="text-[10px] font-bold text-gold-accent uppercase tracking-widest mb-4">PROSTHODONTIST</p>
+              
+              <div class="space-y-2 mb-6 text-xs text-gray-600 tracking-wide">
+                <div class="flex gap-2">
+                  <i class="fa-solid fa-briefcase-medical text-gold-accent shrink-0 mt-0.5"></i>
+                  <span>Full Mouth rehabilitation reconstructs</span>
+                </div>
+                <div class="flex gap-2">
+                  <i class="fa-solid fa-graduation-cap text-gold-accent shrink-0 mt-0.5"></i>
+                  <span>BDS (GDC), MDS (Prosthodontics, PGIMER)</span>
+                </div>
+              </div>
+            </div>
+            <div class="bg-gray-light p-3 rounded italic text-[11px] text-gray-500 border-l-2 border-gold-accent font-medium">
+              Expert in implants and crown restorations.
+            </div>
+          </div>
+        </div>
+
+        <!-- Specialist 4: Dr. Ayesha Jain -->
+        <div class="bg-white rounded-xl shadow-xl overflow-hidden flex flex-col h-full border border-border-color transition-all hover:-translate-y-1.5 duration-300">
+          <div class="relative h-96 bg-[#f1f5f9] overflow-hidden">
+            <span class="absolute top-4 left-4 bg-gold-accent text-white text-[9px] font-bold px-2 py-1 rounded shadow-md tracking-wider">SURGERY CHIEF</span>
+            <img alt="Dr. Ayesha Jain - Senior Oral Surgeon" class="w-full h-full object-cover object-top" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBILvZvMh29MkIg7weGyhOpXatX5HM3r1rQtWB0aa_tngk2yJsan5U117cjek2iFm96Arfy4g_-iBz6S90qkXIZWxTMaS1catHE2mEDg4SNfThBmd9N9kuMHhn2Qv4_nAWMDJhcQDQ1_Q-p4ZmuWwW4uf0yn4CnfZ_ESNOCoyLqU6I19CCYPZ4bHiT5Nkqec8lOIqPixyGcj8g0KRo-JA0g7J31xJyGK-oyKHYhSg_FBhAsN-fVG7S4"/>
+          </div>
+          <div class="p-6 flex-grow flex flex-col justify-between text-navy-dark">
+            <div>
+              <h3 class="text-lg font-bold font-serif mb-0.5">Dr. Ayesha Jain</h3>
+              <p class="text-[10px] font-bold text-gold-accent uppercase tracking-widest mb-4">SENIOR ORAL SURGEON</p>
+              
+              <div class="space-y-2 mb-6 text-xs text-gray-600 tracking-wide">
+                <div class="flex gap-2">
+                  <i class="fa-solid fa-hands-holding-circle text-gold-accent shrink-0 mt-0.5"></i>
+                  <span>Aesthetics, makeovers &amp; surgery precision</span>
+                </div>
+                <div class="flex gap-2">
+                  <i class="fa-solid fa-graduation-cap text-gold-accent shrink-0 mt-0.5"></i>
+                  <span>BDS (Nair Hospital Dental College, Mumbai)</span>
+                </div>
+              </div>
+            </div>
+            <div class="bg-gray-light p-3 rounded italic text-[11px] text-gray-500 border-l-2 border-gold-accent font-medium">
+              Expert in surgical extractions &amp; layouts.
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== CLINICAL BRILLIANCE SECTION ==================== -->
+  <section id="clinic-tour" class="py-24 bg-white relative overflow-hidden border-t border-border-color">
+    <div class="max-w-7xl mx-auto px-4 md:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        
+        <!-- Left: Description and Values -->
+        <div class="lg:col-span-7 space-y-6">
+          <div class="space-y-2">
+            <h2 class="text-3xl md:text-4xl font-bold font-serif text-navy-dark leading-tight">
+              Bringing Clinical Brilliance to Your Smile!
+            </h2>
+            <div class="w-12 h-0.5 bg-gold-accent rounded"></div>
+          </div>
+          
+          <div class="space-y-5 text-gray-500 font-medium font-sans text-sm sm:text-base leading-relaxed tracking-wide">
+            <p>
+              Dedicated to your total oral hygiene, we offer everything from preventative checks to cosmetic aligners and surgery implants. We follow the highest standards of sterilization and patient comfort.
+            </p>
+            <p>
+              Our experienced team led by Dr. Alpha Dental ensures your clinic visits are painless, clean, and highly effective. We focus on modern technology diagnostics.
+            </p>
+            <p>
+              With state-of-the-art dental chairs, digital diagnostic scans, and customized cosmetic frameworks, you'll receive the finest clinical treatment in Greater Kailash-1, New Delhi.
+            </p>
+          </div>
+
+          <!-- Feature Icons Row -->
+          <div class="flex items-center gap-8 pt-4 text-navy-dark font-bold text-sm font-sans">
+            <div class="flex items-center gap-2.5">
+              <i class="fa-solid fa-pump-medical text-gold-accent text-lg shrink-0"></i>
+              <span>100% Sterilized Room</span>
+            </div>
+            <div class="flex items-center gap-2.5">
+              <i class="fa-solid fa-laptop-medical text-gold-accent text-lg shrink-0"></i>
+              <span>Modern Digital Scans</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Rounded Frame Image Card -->
+        <div class="lg:col-span-5 flex justify-center w-full">
+          <div class="bg-white p-3.5 rounded-3xl shadow-[0_20px_50px_rgba(15,23,42,0.06)] border border-gray-100 w-full overflow-hidden transition-all hover:scale-102 duration-300">
+            <img alt="Dentist performing advanced clinical procedure" class="w-full h-auto object-cover rounded-2xl shadow-inner" src="dentist_procedure.jpg"/>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== PATIENT TESTIMONIALS ==================== -->
+  <section id="testimonials" class="py-24 bg-white text-navy-dark relative overflow-hidden border-t border-border-color">
+    <div class="max-w-7xl mx-auto px-4 md:px-8 w-full">
+      
+      <!-- Header Grid Layout (Screenshot text & navigation buttons) -->
+      <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-6 mb-12">
+        <div class="space-y-2">
+          <span class="text-gold-accent text-xs font-bold tracking-widest uppercase">VERIFIED PATIENT REVIEWS</span>
+          <h2 class="text-3xl md:text-4xl font-bold font-serif text-navy-dark tracking-wide leading-tight">Patient Stories</h2>
+          <!-- Small accent line -->
+          <div class="w-12 h-0.5 bg-gold-accent rounded"></div>
+        </div>
+
+        <!-- Write a Review Button + Navigation arrows -->
+        <div class="flex items-center gap-4">
+          <a href="https://search.google.com/local/writereview" target="_blank" class="bg-[#e2edf2] hover:bg-[#d0e0e8] text-navy-blue px-6 py-3 rounded-full text-xs font-bold uppercase tracking-wider flex items-center gap-2 transition-all">
+            <i class="fa-solid fa-pen-to-square text-sm"></i>
+            <span>Write a Review</span>
+          </a>
+          <div class="flex gap-2">
+            <button class="w-10 h-10 rounded-full border border-gray-200 bg-white hover:bg-gray-50 flex items-center justify-center text-gray-500 hover:text-navy-dark shadow-sm transition-all" aria-label="Previous review">
+              <i class="fa-solid fa-chevron-left text-sm"></i>
+            </button>
+            <button class="w-10 h-10 rounded-full border border-gray-200 bg-white hover:bg-gray-50 flex items-center justify-center text-gray-500 hover:text-navy-dark shadow-sm transition-all" aria-label="Next review">
+              <i class="fa-solid fa-chevron-right text-sm"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Testimonials Grid (Rating summary + 2 patient reviews from screenshot) -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 items-stretch">
+        
+        <!-- Column 1: Google Rating Card -->
+        <div class="bg-navy-dark text-white rounded-3xl p-8 flex flex-col items-center justify-center text-center shadow-lg border border-white/5 relative">
+          <h3 class="text-xs font-bold uppercase tracking-widest text-gray-400 mb-2">EXCELLENT</h3>
+          <span class="text-6xl font-extrabold tracking-tight mb-4">5.0</span>
+          
+          <!-- 5 Stars -->
+          <div class="flex space-x-1 mb-3 text-gold-accent text-lg">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+          </div>
+
+          <p class="text-[11px] text-gray-400 font-semibold mb-6">Based on 16 Google Reviews</p>
+
+          <!-- Verified Business Capsule -->
+          <div class="inline-flex items-center gap-2 border border-white/10 bg-white/5 px-4 py-1.5 rounded-full mb-2">
+            <!-- Google Color G Icon -->
+            <svg class="w-4 h-4" viewBox="0 0 24 24">
+              <path fill="#EA4335" d="M12 5.04c1.67 0 3.2.58 4.4 1.7l3.29-3.29A11.95 11.95 0 0 0 12 1.04c-4.75 0-8.8 2.75-10.74 6.74l3.92 3.04c.94-2.82 3.58-4.78 6.82-4.78z"/>
+              <path fill="#4285F4" d="M23.49 12.27c0-.82-.07-1.6-.22-2.36H12v4.51h6.46c-.28 1.48-1.12 2.74-2.38 3.58l3.7 2.87c2.16-2 3.71-4.94 3.71-8.6z"/>
+              <path fill="#FBBC05" d="M5.18 10.82c-.24-.72-.38-1.49-.38-2.3s.14-1.58.38-2.3L1.26 3.18C.46 4.78 0 6.59 0 8.52c0 1.93.46 3.74 1.26 5.34l3.92-3.04z"/>
+              <path fill="#34A853" d="M12 22.96c3.24 0 5.97-1.07 7.96-2.92l-3.7-2.87c-1.03.69-2.35 1.1-4.26 1.1-3.24 0-5.88-1.96-6.82-4.78l-3.92 3.04c1.94 3.99 5.99 6.74 10.74 6.74z"/>
+            </svg>
+            <span class="text-[9px] font-bold tracking-widest text-white uppercase">VERIFIED BUSINESS</span>
+          </div>
+
+          <span class="text-[9px] tracking-widest text-gray-500 uppercase font-semibold">GOOGLE REVIEW PARTNER</span>
+        </div>
+
+        <!-- Column 2: Testimonial Card 1 (Ravi Singh) -->
+        <article class="bg-white rounded-3xl border border-gray-100 p-8 shadow-md relative flex flex-col justify-between h-full transition-all hover:shadow-lg">
+          <!-- Quote Icon -->
+          <div class="absolute top-6 right-8 text-gray-100">
+            <i class="fa-solid fa-quote-right text-3xl"></i>
+          </div>
+
+          <div>
+            <!-- Header Patient info -->
+            <div class="flex items-center gap-4 mb-6">
+              <div class="w-12 h-12 rounded-full bg-navy-blue text-white flex items-center justify-center font-bold text-lg shadow-inner">
+                R
+              </div>
+              <div>
+                <h3 class="font-bold text-sm leading-tight text-navy-dark">Ravi Singh</h3>
+                <p class="text-[10px] text-gray-400 font-semibold mt-0.5">09/05/2026</p>
+              </div>
+            </div>
+
+            <!-- Star ratings + Verified badge -->
+            <div class="flex items-center gap-2 mb-4">
+              <div class="flex space-x-0.5 text-gold-accent text-sm">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+              </div>
+              <!-- Google Verified check badge -->
+              <div class="text-blue-500 flex items-center justify-center" title="Verified Google Review">
+                <i class="fa-solid fa-circle-check text-xs"></i>
+              </div>
+            </div>
+
+            <!-- Review Text -->
+            <p class="text-gray-600 italic leading-relaxed tracking-wide text-xs sm:text-sm font-sans mb-4">
+              "Excellent experience. Very professional dental clinic, minimal waiting time, and painless treatment. Would definitely recommend Alpha Dental International."
+            </p>
+          </div>
+        </article>
+
+        <!-- Column 3: Testimonial Card 2 (Ananya Sharma) -->
+        <article class="bg-white rounded-3xl border border-gray-100 p-8 shadow-md relative flex flex-col justify-between h-full transition-all hover:shadow-lg">
+          <!-- Quote Icon -->
+          <div class="absolute top-6 right-8 text-gray-100">
+            <i class="fa-solid fa-quote-right text-3xl"></i>
+          </div>
+
+          <div>
+            <!-- Header Patient info -->
+            <div class="flex items-center gap-4 mb-6">
+              <div class="w-12 h-12 rounded-full bg-emerald-600 text-white flex items-center justify-center font-bold text-lg shadow-inner">
+                A
+              </div>
+              <div>
+                <h3 class="font-bold text-sm leading-tight text-navy-dark">Ananya Sharma</h3>
+                <p class="text-[10px] text-gray-400 font-semibold mt-0.5">22/04/2026</p>
+              </div>
+            </div>
+
+            <!-- Star ratings + Verified badge -->
+            <div class="flex items-center gap-2 mb-4">
+              <div class="flex space-x-0.5 text-gold-accent text-sm">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+              </div>
+              <!-- Google Verified check badge -->
+              <div class="text-blue-500 flex items-center justify-center" title="Verified Google Review">
+                <i class="fa-solid fa-circle-check text-xs"></i>
+              </div>
+            </div>
+
+            <!-- Review Text -->
+            <p class="text-gray-600 italic leading-relaxed tracking-wide text-xs sm:text-sm font-sans mb-4">
+              "Dr. Alpha Dental took extreme care with my root canal surgery. The treatment was painless and the results are amazing. Five stars!"
+            </p>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== CLINIC HOURS BANNER SECTION ==================== -->
+  <section class="py-20 bg-white relative z-10 border-t border-border-color">
+    <div class="max-w-7xl mx-auto px-4 md:px-8 flex justify-center">
+      <!-- Centered Card -->
+      <div class="bg-white p-8 md:p-10 rounded-2xl shadow-[0_15px_45px_rgba(15,23,42,0.06)] border border-border-color max-w-2xl w-full text-center space-y-6">
+        <h2 class="text-2xl md:text-3xl font-bold font-serif text-navy-dark tracking-wide">Alpha Dental International Hours</h2>
+        <!-- Accent line -->
+        <div class="w-12 h-0.5 bg-gold-accent mx-auto rounded"></div>
+        
+        <div class="space-y-2">
+          <p class="text-lg md:text-xl text-navy-blue font-bold font-sans">
+            Tuesday to Saturday: <span class="text-gold-accent">11:00 AM – 5:00 PM</span>
+          </p>
+          <p class="text-xs text-gray-500 font-bold uppercase tracking-wider">Monday &amp; Sunday: Closed</p>
+        </div>
+
+        <p class="text-xs sm:text-sm text-gray-500 max-w-md mx-auto leading-relaxed tracking-wide font-medium font-sans">
+          Open 7 days, including national holidays, for specialized emergency surgery in GK-1, New Delhi.
+        </p>
+
+        <div class="pt-4">
+          <a href="#home" class="inline-block bg-navy-blue hover:bg-navy-dark border border-gold-accent/25 hover:border-gold-accent text-white px-8 py-3.5 rounded-lg font-bold text-xs uppercase tracking-widest transition-all hover:-translate-y-0.5 shadow-md">
+            BOOK AN APPOINTMENT
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== MAP & VISIT SECTION ==================== -->
+  <section id="booking" class="relative py-24 bg-navy-dark text-white overflow-hidden">
+    <!-- Background Image blur overlay -->
+    <div class="absolute inset-0 z-0">
+      <img alt="Clinic Setup Blurred" class="w-full h-full object-cover opacity-65 blur-md" src="clinic_single.jpg"/>
+      <div class="absolute inset-0 bg-navy-dark/75"></div>
+    </div>
+
+    <div class="relative z-10 max-w-7xl mx-auto px-4 md:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        
+        <!-- Left Panel: Rounded corner map frame card -->
+        <div class="lg:col-span-6 w-full">
+          <div class="bg-white p-3 rounded-2xl shadow-2xl border border-white/10 w-full overflow-hidden">
+            <!-- Google Maps Iframe for GK-1 -->
+            <iframe 
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3504.686520336214!2d77.23439407632669!3d28.549141075711648!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce3c415555555%3A0x6b5e0c5555555555!2sGreater%20Kailash%20I%2C%20Block%20E%2C%20Greater%20Kailash%2C%20New%20Delhi%2C%20Delhi%20110048!5e0!3m2!1sen!2sin!4v1720695000000!5m2!1sen!2sin" 
+              class="w-full h-80 md:h-96 rounded-xl border-0" 
+              allowfullscreen="" 
+              loading="lazy" 
+              referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+          </div>
+        </div>
+
+        <!-- Right Panel: Contact text details & Get Directions -->
+        <div class="lg:col-span-6 space-y-6 lg:pl-6">
+          <div class="space-y-2">
+            <h2 class="text-3xl md:text-4xl font-bold font-serif text-white tracking-wide leading-tight">Visit The Clinic</h2>
+            <!-- Small highlight underline -->
+            <div class="w-16 h-1 bg-gold-accent rounded"></div>
+          </div>
+          
+          <div class="space-y-6 pt-4">
+            <!-- Address details -->
+            <div class="flex items-start gap-4">
+              <i class="fa-solid fa-location-dot text-gold-accent text-xl mt-1 shrink-0"></i>
+              <p class="text-sm md:text-base text-gray-300 leading-relaxed font-sans font-semibold">
+                First Floor, E 18, Block R, Greater Kailash I,<br/>
+                New Delhi, Delhi 110048 (Above NM-PET Scan)
+              </p>
+            </div>
+
+            <!-- Phone Helpline details -->
+            <div class="flex items-center gap-4">
+              <i class="fa-solid fa-phone text-gold-accent text-xl shrink-0"></i>
+              <a href="tel:08599970005" class="text-lg md:text-xl text-white font-bold hover:text-gold-accent transition-colors font-sans">
+                085999 70005
+              </a>
+            </div>
+          </div>
+
+          <!-- Get Directions CTA button -->
+          <div class="pt-4">
+            <a 
+              href="https://maps.google.com/?q=First+Floor,+E+18,+Block+R,+Greater+Kailash+I,+New+Delhi+110048" 
+              target="_blank" 
+              class="inline-block bg-navy-blue hover:bg-navy-dark border border-gold-accent/30 hover:border-gold-accent text-white px-8 py-3.5 rounded-lg font-bold text-sm tracking-wider uppercase transition-all hover:-translate-y-0.5 shadow-md">
+              GET DIRECTIONS
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== GLOBAL FOOTER ==================== -->
+  <footer class="bg-navy-dark text-white pt-16 pb-8 px-4 md:px-8 border-t border-border-color">
+    <div class="max-w-7xl mx-auto">
+      
+      <!-- Top Grid Layout -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-10 mb-16">
+        
+        <!-- Brand column -->
+        <div class="space-y-6">
+          <div class="flex items-center gap-3">
+            <i class="fa-solid fa-tooth text-2xl text-white"></i>
+            <span class="text-xl font-bold font-serif text-white tracking-wide uppercase">ALPHA DENTAL INTERNATIONAL</span>
+          </div>
+          <p class="text-gray-400 text-sm leading-relaxed tracking-wide font-sans">
+            Modern clinical hygiene prosthodontist center dedicated to aesthetic alignments, whitening, implants, and same-day dental emergency surgeries in First Floor, E 18, GK-1, Block R, Greater Kailash I, New Delhi - 110048 (Above NM-PET Scan).
+          </p>
+        </div>
+
+        <!-- Active Timings -->
+        <div class="space-y-6">
+          <h3 class="text-white font-bold uppercase tracking-wider text-sm">ACTIVE TIMING</h3>
+          <div class="space-y-2 text-sm text-gray-400 font-semibold font-sans">
+            <p>Tuesday to Saturday</p>
+            <p class="text-white font-bold">11:00 AM – 5:00 PM</p>
+            <p class="text-gold-accent flex items-center gap-2" id="footer-status-container">
+              <span id="footer-status-dot" class="w-2.5 h-2.5 bg-green-500 rounded-full inline-block animate-pulse"></span>
+              <span id="footer-status-text">Open Now (11 AM - 5 PM)</span>
+            </p>
+          </div>
+        </div>
+
+        <!-- Helpline -->
+        <div class="space-y-6">
+          <h3 class="text-white font-bold uppercase tracking-wider text-sm">DENTAL HELPLINE</h3>
+          <ul class="space-y-4 text-sm text-gray-400 font-semibold">
+            <li class="flex items-center gap-3">
+              <i class="fa-solid fa-phone text-gold-accent shrink-0"></i>
+              <a href="tel:08599970005" class="hover:text-gold-accent transition-colors">085999 70005</a>
+            </li>
+            <li class="flex items-center gap-3">
+              <i class="fa-solid fa-envelope text-gold-accent shrink-0"></i>
+              <a href="mailto:delhidentalclinicindia@gmail.com" class="hover:text-gold-accent transition-colors">delhidentalclinicindia@gmail.com</a>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+
+      <!-- Bottom Bar -->
+      <div class="pt-8 border-t border-border-color/20 flex flex-col sm:flex-row justify-between items-center gap-4 text-xs text-gray-400 font-medium">
+        
+        <!-- Left: Scroll to Top + Copyright -->
+        <div class="flex items-center gap-4">
+          <button onclick="window.scrollTo({top: 0, behavior: 'smooth'})" class="w-10 h-10 bg-white hover:bg-gold-accent text-navy-dark hover:text-white rounded-full flex items-center justify-center transition-all shadow-md" aria-label="Scroll to top">
+            <i class="fa-solid fa-arrow-up"></i>
+          </button>
+          <p>Copyright © 2026 Alpha Dental International. All Rights Reserved.</p>
+        </div>
+
+        <!-- Right: Powered By -->
+        <div>
+          <p>Powered by <span class="font-bold text-white">VERTEX.DIGITAL</span></p>
+        </div>
+
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- Sticky Floating Action Buttons -->
+  <div class="fixed bottom-6 right-6 z-50 flex flex-col gap-3">
+    <!-- Phone Call Button -->
+    <a href="tel:08599970005" class="w-14 h-14 bg-navy-blue hover:bg-navy-dark text-white rounded-full flex items-center justify-center shadow-2xl transition-all hover:scale-110" aria-label="Call Helpline">
+      <i class="fa-solid fa-phone text-xl"></i>
+    </a>
+    <!-- Chat Message Button -->
+    <a href="https://wa.me/918700706766" target="_blank" class="w-14 h-14 bg-[#0dfd87]/90 hover:bg-[#0bc067] text-white rounded-full flex items-center justify-center shadow-2xl transition-all hover:scale-110" aria-label="Chat WhatsApp">
+      <i class="fa-solid fa-message text-xl"></i>
+    </a>
+  </div>
+
+  
+  <script>
+    // 1. Mobile Menu Toggles
+    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenuClose = document.getElementById('mobile-menu-close');
+    const mobileMenuOverlay = document.getElementById('mobile-menu-overlay');
+    const mobileMenuDrawer = document.getElementById('mobile-menu-drawer');
+    const drawerBookingBtn = document.getElementById('mobile-drawer-booking-btn');
+
+    function openMobileMenu() {
+      mobileMenuOverlay.classList.remove('hidden');
+      setTimeout(() => mobileMenuOverlay.classList.add('opacity-100'), 10);
+      mobileMenuDrawer.classList.remove('translate-x-full');
+    }
+
+    function closeMobileMenu() {
+      mobileMenuOverlay.classList.remove('opacity-100');
+      mobileMenuDrawer.classList.add('translate-x-full');
+      setTimeout(() => mobileMenuOverlay.classList.add('hidden'), 300);
+    }
+
+    mobileMenuBtn.addEventListener('click', openMobileMenu);
+    mobileMenuClose.addEventListener('click', closeMobileMenu);
+    mobileMenuOverlay.addEventListener('click', closeMobileMenu);
+    drawerBookingBtn.addEventListener('click', closeMobileMenu);
+
+    // Close menu when clicking links
+    document.querySelectorAll('#mobile-menu-drawer nav a').forEach(link => {
+      link.addEventListener('click', closeMobileMenu);
+    });
+
+    // 2. Hero Background Image Slider Logic (Disabled for static single background)
+
+    // 3. Navigation Underline Active Link Highlighting on Scroll
+    const navLinks = document.querySelectorAll('header nav a');
+    const sections = document.querySelectorAll('section, main');
+
+    window.addEventListener('scroll', () => {
+      let currentSectionId = '';
+      const scrollPosition = window.scrollY + 160;
+
+      sections.forEach(section => {
+        const sectionTop = section.offsetTop;
+        const sectionHeight = section.offsetHeight;
+        if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
+          currentSectionId = section.getAttribute('id');
+        }
+      });
+
+      navLinks.forEach(link => {
+        link.classList.remove('active-nav-link');
+        const href = link.getAttribute('href');
+        if (href === '#' && currentSectionId === 'home') {
+          link.classList.add('active-nav-link');
+        } else if (href === `#${currentSectionId}`) {
+          link.classList.add('active-nav-link');
+        }
+      });
+    });
+
+    // 4. Booking Form Submission Handler
+    document.getElementById('appointment-form').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const patientName = document.getElementById('full-name').value;
+      const selectedService = document.getElementById('service').options[document.getElementById('service').selectedIndex].text;
+      const selectedDate = document.getElementById('date').value;
+
+      alert(`Appointment Request Received!\n\nPatient: ${patientName}\nService: ${selectedService}\nPreferred Date: ${selectedDate}\n\nOur coordinator will contact you shortly to finalize the slot.`);
+      this.reset();
+    });
+
+    // 4. Hero Multi-step Booking Form Logic
+    function goHeroStep2() {
+      const name = document.getElementById('hero-name');
+      const phone = document.getElementById('hero-phone');
+      
+      if (!name.checkValidity()) {
+        name.reportValidity();
+        return;
+      }
+      if (!phone.checkValidity()) {
+        phone.reportValidity();
+        return;
+      }
+      
+      document.getElementById('hero-step-1').classList.add('hidden');
+      document.getElementById('hero-step-2').classList.remove('hidden');
+      
+      document.getElementById('step-line-highlight-1').style.width = '50%';
+      
+      // Activate circle 2
+      const c2 = document.getElementById('step-circle-2');
+      c2.classList.remove('bg-gray-100', 'text-gray-400', 'border-gray-200');
+      c2.classList.add('bg-navy-blue', 'text-white', 'border-navy-blue');
+    }
+
+    function goHeroStep1() {
+      document.getElementById('hero-step-2').classList.add('hidden');
+      document.getElementById('hero-step-1').classList.remove('hidden');
+      
+      document.getElementById('step-line-highlight-1').style.width = '0%';
+      
+      // Deactivate circle 2
+      const c2 = document.getElementById('step-circle-2');
+      c2.classList.add('bg-gray-100', 'text-gray-400', 'border-gray-200');
+      c2.classList.remove('bg-navy-blue', 'text-white', 'border-navy-blue');
+    }
+
+    function goHeroStep3() {
+      document.getElementById('hero-step-2').classList.add('hidden');
+      document.getElementById('hero-step-3').classList.remove('hidden');
+      
+      document.getElementById('step-line-highlight-1').style.width = '100%';
+      
+      // Activate circle 3
+      const c3 = document.getElementById('step-circle-3');
+      c3.classList.remove('bg-gray-100', 'text-gray-400', 'border-gray-200');
+      c3.classList.add('bg-navy-blue', 'text-white', 'border-navy-blue');
+    }
+
+    function backToHeroStep2() {
+      document.getElementById('hero-step-3').classList.add('hidden');
+      document.getElementById('hero-step-2').classList.remove('hidden');
+      
+      document.getElementById('step-line-highlight-1').style.width = '50%';
+      
+      // Deactivate circle 3
+      const c3 = document.getElementById('step-circle-3');
+      c3.classList.add('bg-gray-100', 'text-gray-400', 'border-gray-200');
+      c3.classList.remove('bg-navy-blue', 'text-white', 'border-navy-blue');
+    }
+
+    function resetHeroForm() {
+      document.getElementById('hero-success-panel').classList.add('hidden');
+      document.getElementById('hero-multi-step-form').reset();
+      
+      // Go back to step 1 state
+      document.getElementById('hero-step-3').classList.add('hidden');
+      document.getElementById('hero-step-2').classList.add('hidden');
+      document.getElementById('hero-step-1').classList.remove('hidden');
+      
+      document.getElementById('step-line-highlight-1').style.width = '0%';
+      
+      const c2 = document.getElementById('step-circle-2');
+      c2.classList.add('bg-gray-100', 'text-gray-400', 'border-gray-200');
+      c2.classList.remove('bg-navy-blue', 'text-white', 'border-navy-blue');
+      
+      const c3 = document.getElementById('step-circle-3');
+      c3.classList.add('bg-gray-100', 'text-gray-400', 'border-gray-200');
+      c3.classList.remove('bg-navy-blue', 'text-white', 'border-navy-blue');
+    }
+
+    // Connect form submit to success card and overlay
+    document.addEventListener('DOMContentLoaded', () => {
+      const form = document.getElementById('hero-multi-step-form');
+      if (form) {
+        form.addEventListener('submit', (e) => {
+          e.preventDefault();
+          const name = document.getElementById('hero-name').value;
+          const service = document.getElementById('hero-service').value;
+          const date = document.getElementById('hero-date').value;
+          const time = document.getElementById('hero-time').value;
+          
+          const successText = document.getElementById('hero-success-text');
+          if (successText) {
+            successText.textContent = `Thank you, ${name}! Your request for ${service} on ${date} (${time}) has been logged. Our GK-1 coordinator will call/WhatsApp you shortly to confirm.`;
+          }
+          
+          document.getElementById('hero-success-panel').classList.remove('hidden');
+        });
+      }
+    });
+
+    // 5. Dynamic Clinic Open/Closed Hours Script
+    function updateClinicStatus() {
+      const now = new Date();
+      const day = now.getDay();
+      const hour = now.getHours();
+      
+      const statusDot = document.getElementById('clinic-status-dot');
+      const statusText = document.getElementById('clinic-status-text');
+      const fStatusDot = document.getElementById('footer-status-dot');
+      const fStatusText = document.getElementById('footer-status-text');
+      const hStatusDot = document.getElementById('hero-status-dot');
+      const hStatusText = document.getElementById('hero-status-text');
+      
+      // Tuesday (2) through Saturday (6)
+      // Hours: 11:00 AM to 5:00 PM (11 to 17)
+      const isOpenDay = (day >= 2 && day <= 6);
+      const isOpenHour = (hour >= 11 && hour < 17);
+      
+      if (isOpenDay && isOpenHour) {
+        if(statusDot) {
+          statusDot.className = "w-1.5 h-1.5 bg-emerald-500 rounded-full animate-ping";
+          statusText.className = "text-emerald-400 font-bold tracking-wider uppercase";
+          statusText.textContent = "Open Now (closes at 5:00 PM)";
+        }
+        if(fStatusDot) {
+          fStatusDot.className = "w-2.5 h-2.5 bg-green-500 rounded-full inline-block animate-pulse";
+          fStatusText.className = "text-emerald-400 font-bold";
+          fStatusText.textContent = "Open Now (11:00 AM - 5:00 PM)";
+        }
+        if(hStatusDot) {
+          hStatusDot.className = "w-2 h-2 bg-green-500 rounded-full inline-block animate-pulse";
+          hStatusText.textContent = "Open Now (11 AM - 5 PM)";
+        }
+      } else {
+        if(statusDot) {
+          statusDot.className = "w-1.5 h-1.5 bg-rose-500 rounded-full";
+          statusText.className = "text-rose-400 font-bold tracking-wider uppercase";
+          statusText.textContent = "Closed Now";
+        }
+        if(fStatusDot) {
+          fStatusDot.className = "w-2.5 h-2.5 bg-rose-500 rounded-full inline-block";
+          fStatusText.className = "text-rose-400 font-bold text-xs";
+          fStatusText.textContent = "Closed Now";
+        }
+        if(hStatusDot) {
+          hStatusDot.className = "w-2 h-2 bg-rose-500 rounded-full inline-block";
+          hStatusText.textContent = "Closed Now";
+        }
+      }
+    }
+    updateClinicStatus();
+  </script>
+</body>
+</html>

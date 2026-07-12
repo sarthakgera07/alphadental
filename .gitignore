@@ -1,0 +1,23 @@
+# System Files
+Thumbs.db
+Desktop.ini
+.DS_Store
+
+# IDEs and Editors
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.swp
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Temporary logs/task directories
+.system_generated/
+*.log

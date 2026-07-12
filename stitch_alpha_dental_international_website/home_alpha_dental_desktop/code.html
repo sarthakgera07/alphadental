@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Delhi Dental - Premium Dental Excellence</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brandDeepNavy: '#0f172a',
+            brandGold: '#c29d38',
+            brandGoldHover: '#d4af37',
+            brandDarker: '#0a0f1d'
+          },
+          fontFamily: {
+            sans: ['Inter', 'system-ui', 'sans-serif'],
+            serif: ['Playfair Display', 'serif'],
+          }
+        }
+      }
+    }
+  </script>
+<!-- Google Fonts for professional typography -->
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;family=Playfair+Display:wght@700&amp;display=swap" rel="stylesheet"/>
+<style data-purpose="custom-layout">
+    .hero-overlay {
+      background: linear-gradient(90deg, rgba(15, 23, 42, 0.9) 0%, rgba(15, 23, 42, 0.7) 50%, rgba(15, 23, 42, 0.4) 100%);
+    }
+    .info-card {
+      background: rgba(30, 41, 59, 0.4);
+      backdrop-filter: blur(8px);
+      border: 1px solid rgba(194, 157, 56, 0.2);
+    }
+  </style>
+</head>
+<body class="bg-brandDeepNavy text-white font-sans antialiased">
+<!-- BEGIN: TopBar -->
+<div class="bg-brandDarker border-b border-gray-800 text-[11px] py-2 px-8 flex justify-between items-center text-gray-400">
+<div class="flex items-center gap-6">
+<div class="flex items-center gap-2">
+<svg class="h-3 w-3 text-brandGold" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+        New Delhi, India
+      </div>
+<div class="flex items-center gap-2">
+<svg class="h-3 w-3 text-brandGold" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+        +91 80-79-79-79-78 , 011-410-16-309
+      </div>
+</div>
+<div class="flex items-center gap-1">
+<span class="w-1.5 h-1.5 bg-brandGold rounded-full"></span>
+</div>
+</div>
+<!-- END: TopBar -->
+<!-- BEGIN: MainHeader -->
+<header class="sticky top-0 z-50 bg-brandDeepNavy/90 backdrop-blur-md px-8 py-4 flex items-center justify-between border-b border-gray-800">
+<!-- Logo Section -->
+<div class="flex items-center gap-3">
+<img alt="Delhi Dental Logo" class="h-12 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBPbvvpWwiP-mpZGDEHGK8Iw5kiUoA8M6WkYQZmngPyf2-zAO4KKS5G2sqLPlPLt8q7G0VsVqJeJZZkf08AUeOx3NCWz21272cRBOADSmN8vwpSKAtahSqee-8EpDNhgQW_f5b34JabsmSIoP25AcVYzofD8K2WFtlh4nTBW8un4A4ArMIB08o1yNJDb6lSapz33wxZS6YUjFNd0i8x2GeSdowHoiJ6vHtp20yePPPNhw4LMhYHW--eE4DjD1lrbFtTUg" style="clip-path: inset(60px 1800px 750px 20px);"/> <!-- Masking logic to extract logo from provided image -->
+<div class="flex flex-col">
+<span class="text-xl font-bold tracking-wider text-brandGold leading-tight">DELHI DENTAL</span>
+<span class="text-[10px] tracking-[0.2em] text-gray-400">PREMIUM DENTAL EXCELLENCE</span>
+</div>
+</div>
+<!-- Navigation -->
+<nav class="hidden lg:flex items-center gap-8 text-sm font-medium">
+<a class="text-brandGold border-b-2 border-brandGold pb-1" href="#">Home</a>
+<a class="text-gray-300 hover:text-brandGold transition-colors" href="#">About</a>
+<a class="text-gray-300 hover:text-brandGold transition-colors" href="#">Services</a>
+<a class="text-gray-300 hover:text-brandGold transition-colors" href="#">Our Team</a>
+<a class="text-gray-300 hover:text-brandGold transition-colors" href="#">Testimonials</a>
+<a class="text-gray-300 hover:text-brandGold transition-colors" href="#">Blogs</a>
+<a class="text-gray-300 hover:text-brandGold transition-colors" href="#">Contact</a>
+</nav>
+<!-- Header Actions -->
+<div class="flex items-center gap-4">
+<button class="bg-gray-700 hover:bg-gray-600 px-6 py-2 rounded-md text-sm font-semibold transition-all">Login</button>
+<button class="bg-brandGold hover:bg-brandGoldHover text-brandDeepNavy px-6 py-2 rounded-md text-sm font-bold flex items-center gap-2 transition-all">
+<svg class="h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+        Book Now
+      </button>
+</div>
+</header>
+<!-- END: MainHeader -->
+<!-- BEGIN: HeroSection -->
+<main class="relative min-h-[calc(100vh-100px)] flex items-center overflow-hidden">
+<!-- Background Image -->
+<div class="absolute inset-0 z-0">
+<img alt="Dental Clinic Background" class="w-full h-full object-cover opacity-60" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDJSsJgl3q06LtKNHAl64O4f5JLHvJ1VS6uSrOLm-lZMg386xGTKwJjfIkJ2l_fbu9CYmc9ivMuEpi1mNwpqlfjQXhCA76xftXVf2zZrvhaY7uOa0Oy0greKtfvq-jBr6QcNK6KlXd31CDZSJ3orHNPqATUtQ1lZyHHJGEJrylDin-xbZnj0EuPNFcBaz0vXdFYxvMPtP5KPb1hEszgCjGVrRMsWBrSDdprOpI66i6I3a92sE7XrI8nYTPbymYAaWp9zA"/>
+<div class="absolute inset-0 hero-overlay"></div>
+</div>
+<!-- Content Container -->
+<div class="relative z-10 container mx-auto px-12 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+<!-- Hero Text Area -->
+<div data-purpose="hero-content">
+<div class="inline-flex items-center gap-2 border border-brandGold/40 bg-brandGold/10 px-4 py-1.5 rounded-full mb-8">
+<svg class="h-4 w-4 text-brandGold" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+<span class="text-xs font-semibold tracking-widest text-brandGold uppercase italic">Creating Smile, Changing Life</span>
+</div>
+<h1 class="text-6xl lg:text-7xl font-bold leading-[1.1] mb-8">
+          Delhi's Premier <br/>
+<span class="text-white">Dental Excellence</span>
+</h1>
+<p class="text-gray-300 text-lg leading-relaxed max-w-xl mb-10">
+          Experience world-class dental care led by <span class="text-white font-semibold">Dr. Nitu Gautam</span> BDS(Nair, Mumbai), MDS (Orthodontics, IDS) Professor(IDS, S'O'A University) Fellow (World Federation of Orthodontist) Member of peer review board, JCO-IOS Editor IOS times Reg no-3224/A with 16+ years of clinical mastery and state-of-the-art technology.
+        </p>
+<div class="flex items-center gap-4">
+<button class="bg-brandGold hover:bg-brandGoldHover text-brandDeepNavy px-8 py-4 rounded-md font-bold text-lg flex items-center gap-3 transition-transform hover:scale-105">
+<svg class="h-5 w-5" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 4v1m6 11h2m-6 0h-2v4m0-11v3m0 0h.01M12 12h4.01M16 20h4M4 12h4m12 0h.01M5 8h2a1 1 0 001-1V5a1 1 0 00-1-1H5a1 1 0 00-1 1v2a1 1 0 001 1zm12 0h2a1 1 0 001-1V5a1 1 0 00-1-1h-2a1 1 0 00-1 1v2a1 1 0 001 1zM5 20h2a1 1 0 001-1v-2a1 1 0 00-1-1H5a1 1 0 00-1 1v2a1 1 0 001 1z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+            Book Appointment
+          </button>
+<button class="border-2 border-brandGold/60 hover:bg-brandGold hover:text-brandDeepNavy px-8 py-4 rounded-md font-bold text-lg transition-all">
+            View Services
+          </button>
+</div>
+</div>
+<!-- Hero Sidebar Info -->
+<div class="flex flex-col gap-6" data-purpose="hero-sidebar">
+<!-- Location Card -->
+<div class="info-card p-6 rounded-xl flex gap-5">
+<div class="bg-brandGold text-brandDeepNavy w-12 h-12 flex items-center justify-center rounded-lg flex-shrink-0">
+<svg class="h-6 w-6" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</div>
+<div>
+<h4 class="text-brandGold font-bold text-lg mb-1">Prime Location</h4>
+<p class="text-sm text-gray-100 font-medium">R-241, Ground Floor, G.K-1, New Delhi</p>
+<p class="text-[10px] text-gray-400 mt-1 uppercase tracking-wider">OPP. GK-1 POLICE STATION • FREE PARKING</p>
+</div>
+</div>
+<!-- Hours Card -->
+<div class="info-card p-6 rounded-xl flex gap-5">
+<div class="bg-brandGold text-brandDeepNavy w-12 h-12 flex items-center justify-center rounded-lg flex-shrink-0">
+<svg class="h-6 w-6" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</div>
+<div>
+<h4 class="text-brandGold font-bold text-lg mb-1">Flexible Hours</h4>
+<p class="text-sm text-gray-100 font-medium">Tue-Sat: 9:00 AM - 7:00 PM and Mon - Close</p>
+</div>
+</div>
+<!-- Contact Card -->
+<div class="info-card p-6 rounded-xl flex gap-5">
+<div class="bg-brandGold text-brandDeepNavy w-12 h-12 flex items-center justify-center rounded-lg flex-shrink-0">
+<svg class="h-6 w-6" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</div>
+<div>
+<h4 class="text-brandGold font-bold text-lg mb-1">Quick Contact</h4>
+<p class="text-sm text-gray-100 font-medium">+91 80-79-79-79-78 , 011-410-16-309</p>
+<p class="text-[10px] text-gray-400 mt-1 uppercase tracking-wider">WHATSAPP: +91 80-79-79-79-78</p>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- END: HeroSection -->
+</body></html>

@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Delhi Dental Clinic - Footer</title>
+<!-- Tailwind CSS CDN -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Google Fonts for better typography matching -->
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<!-- Font Awesome for Icons -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
+<script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              gold: '#D4AF37', // Gold color for accents and headings
+              dark: '#050A18', // Deep navy/dark background
+              muted: '#A0AEC0', // Muted text color
+              border: '#1A202C' // Darker border for social icons
+            }
+          },
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+          },
+        }
+      }
+    }
+  </script>
+<style data-purpose="custom-layout">
+    /* Subtle hover transitions for links */
+    .footer-link {
+      transition: color 0.3s ease;
+    }
+    .footer-link:hover {
+      color: #D4AF37;
+    }
+    /* Social icon container styling */
+    .social-icon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      height: 40px;
+      border: 1px solid rgba(212, 175, 55, 0.3);
+      border-radius: 4px;
+      color: #D4AF37;
+      transition: all 0.3s ease;
+    }
+    .social-icon:hover {
+      background-color: #D4AF37;
+      color: #050A18;
+    }
+    /* Section Title Border Left */
+    .section-title {
+      border-left: 2px solid #D4AF37;
+      padding-left: 12px;
+    }
+  </style>
+</head>
+<body class="bg-brand-dark font-sans text-white">
+<!-- BEGIN: MainFooter -->
+<footer class="pt-16 pb-8 px-4 md:px-12 lg:px-24">
+<div class="max-w-7xl mx-auto">
+<!-- Top Section: Grid Layout -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+<!-- BEGIN: BrandColumn -->
+<div class="space-y-6" data-purpose="brand-info">
+<div class="flex items-center gap-3">
+<!-- Logo Placeholder using provided structure -->
+<img alt="Delhi Dental Clinic Logo" class="h-12 object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDNaYxOdBn8Vu2413OaqQA-TrKWFkPz0oU31zgmC8S5x5THxp2Td9yp8K9SSGpbjlxvoLH-a3z7EnUnVkEMilgdf4sQEK5X9FTtVbZH0P1W5kLDfywSP-Xv1vlyrX9C4QnRFoZfXQ1Cuop_bRdKzWTgTEX1jw75V3HiUBBFsKKgyOsiXxrHLc2q72_kVP6xzzAmvAgIeQX63qR-ZvznoGBr-zbCH-06LMRLZWpskenQoZIehlP_sZ2JTLURKqYH0ultPA" style="max-width: 100%; height: auto; filter: brightness(1.2);"/>
+<span class="text-xl font-bold text-brand-gold">Delhi Dental Clinic</span>
+</div>
+<p class="text-gray-400 text-sm leading-relaxed">
+            Providing excellence in dental care for over 16 years. Your smile is our priority, your satisfaction is our success.
+          </p>
+<div class="flex items-center gap-2 text-brand-gold text-sm font-semibold">
+<i class="fa-solid fa-award"></i>
+<span>Award-Winning Clinic</span>
+</div>
+<!-- Social Media Icons -->
+<div class="flex gap-3">
+<a aria-label="Facebook" class="social-icon" href="#"><i class="fa-brands fa-facebook-f"></i></a>
+<a aria-label="Instagram" class="social-icon" href="#"><i class="fa-brands fa-instagram"></i></a>
+<a aria-label="Twitter" class="social-icon" href="#"><i class="fa-brands fa-twitter"></i></a>
+<a aria-label="LinkedIn" class="social-icon" href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+</div>
+</div>
+<!-- END: BrandColumn -->
+<!-- BEGIN: QuickLinksColumn -->
+<div data-purpose="navigation-links">
+<h3 class="section-title text-white font-bold mb-8">Quick Links</h3>
+<ul class="space-y-4 text-sm text-gray-400">
+<li><a class="footer-link" href="#">Home</a></li>
+<li><a class="footer-link" href="#">About Us</a></li>
+<li><a class="footer-link" href="#">Our Services</a></li>
+<li><a class="footer-link" href="#">Our Team</a></li>
+<li><a class="footer-link" href="#">Testimonials</a></li>
+<li><a class="footer-link" href="#">Contact Us</a></li>
+</ul>
+</div>
+<!-- END: QuickLinksColumn -->
+<!-- BEGIN: ServicesColumn -->
+<div data-purpose="services-links">
+<h3 class="section-title text-white font-bold mb-8">Our Services</h3>
+<ul class="space-y-4 text-sm text-gray-400">
+<li><a class="footer-link" href="#">General Dentistry</a></li>
+<li><a class="footer-link" href="#">Cosmetic Dentistry</a></li>
+<li><a class="footer-link" href="#">Orthodontics</a></li>
+<li><a class="footer-link" href="#">Invisalign</a></li>
+<li><a class="footer-link" href="#">Root Canal</a></li>
+<li><a class="footer-link" href="#">Dental Implants</a></li>
+<li><a class="footer-link" href="#">Pediatric Care</a></li>
+<li><a class="footer-link" href="#">Smile Design</a></li>
+</ul>
+</div>
+<!-- END: ServicesColumn -->
+<!-- BEGIN: ContactColumn -->
+<div data-purpose="contact-info">
+<h3 class="section-title text-white font-bold mb-8">Contact Info</h3>
+<ul class="space-y-6">
+<li class="flex items-start gap-4">
+<div class="bg-[#111827] p-3 rounded-md text-brand-gold">
+<i class="fa-solid fa-location-dot"></i>
+</div>
+<p class="text-sm text-gray-400">
+                R-241, Ground Floor, G.K-1,<br/>
+                Opp. GK-1 Police Station, New Delhi - 110048
+              </p>
+</li>
+<li class="flex items-center gap-4">
+<div class="bg-[#111827] p-3 rounded-md text-brand-gold">
+<i class="fa-solid fa-phone"></i>
+</div>
+<p class="text-sm text-gray-400">+91 80-79-79-79-78 , 011-410-16-309</p>
+</li>
+<li class="flex items-center gap-4">
+<div class="bg-[#111827] p-3 rounded-md text-brand-gold">
+<i class="fa-solid fa-envelope"></i>
+</div>
+<p class="text-sm text-gray-400">delhidentalclinicindia@gmail.com</p>
+</li>
+</ul>
+</div>
+<!-- END: ContactColumn -->
+</div>
+<!-- BEGIN: BottomBar -->
+<div class="pt-8 border-t border-gray-800 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-gray-500">
+<div class="flex items-center gap-1">
+<span>© 2026 Delhi Dental Clinic. Designed by <span class="text-brand-gold">CipherShield Technologies</span></span>
+</div>
+<div class="flex gap-6">
+<a class="hover:text-brand-gold transition-colors" href="#">Privacy Policy</a>
+<a class="hover:text-brand-gold transition-colors" href="#">Terms of Service</a>
+</div>
+</div>
+<!-- END: BottomBar -->
+</div>
+</footer>
+<!-- END: MainFooter -->
+</body></html>
